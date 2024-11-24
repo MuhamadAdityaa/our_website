@@ -11,30 +11,28 @@
     <!-- NAVIGATION -->
     <div class="bg-white text-black drop-shadow-lg sticky w-full top-0">
         <div class="flex items-center justify-between px-4 py-1 mx-4 sm:px-8 sm:mx-8 md:px-12 md:mx-12 lg:px-16 lg:mx-16 md:py-2">
-          <div class="flex space-x-2 items-center">
-            <!-- BURGER MENU -->
-            <div class="lg:hidden">
-                <button id="burger-button" class="text-gray-800 focus:outline-none">
-                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                     </svg>
+            <div class="flex space-x-2 items-center">
+                <!-- BURGER MENU -->
+                <div class="lg:hidden">
+                    <button id="burger-button" class="text-gray-800 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- BURGER MENU END -->
+                <!-- IKON -->
+                <button class="p-2 rounded">
+                    <img src="../photo/Logo.png" alt="logo" class="h-10 w-10">
                 </button>
+                <!-- IKON END -->
             </div>
-            <!-- BURGER MENU END -->
-            <!-- IKON -->
-            <button class="p-2 rounded">
-                <img src="../photo/Logo.png" alt="logo" class="h-10 w-10">
-            </button>
-            <!-- IKON END -->
-          </div>
-          <!-- Teks bagian kanan -->
-          <div class="flex space-x-4 justify-center items-center">
-            <a href="../index.html" class="aktif py-2 px-2 md:py-4 md:px-4 rounded hover:bg-back-blue hover:text-white">Beranda</a>
-            <a href="./content.html" class="aktif py-2 px-2 md:py-4 md:px-4 rounded hover:bg-back-blue hover:text-white bg-back-blue text-white">Materi</a>
-          </div>
+            <!-- Teks bagian kanan -->
+            <div class="flex space-x-4 justify-center items-center">
+                <a href="../index.html" class="aktif py-2 px-2 md:py-4 md:px-4 rounded hover:bg-back-blue hover:text-white">Beranda</a>
+                <a href="./content.html" class="aktif py-2 px-2 md:py-4 md:px-4 rounded hover:bg-back-blue hover:text-white bg-back-blue text-white">Materi</a>
+            </div>
         </div>
-
-
     </div>
     <!-- NAVIGATION END -->
 
@@ -202,91 +200,82 @@
             <li><a href="./JS_mistakes.html" class="block p-2 hover:bg-back-blue rounded w-full text-left">JS Mistakes</a></li>
             <li><a href="./JS_performance.html" class="block p-2 hover:bg-back-blue rounded w-full text-left">JS Performance</a></li>
             <li><a href="./JS_reserved_words.html" class="block p-2 hover:bg-back-blue rounded w-full text-left">JS Reserved Words</a></li>
-     
-       <!-- MATERI -->
-<div class="overflow-y-auto w-screen">
-    <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
-        <!-- MATERI KALIAN DISINI YAAAAA!!!!!! -->
-        <div class="text-5xl font-bold">
-            JavaScript Date Format
-            <p class="text-xl py-5 font-normal">
-                JavaScript menyediakan beberapa cara untuk memformat tanggal dan waktu. Anda dapat menggunakan metode seperti <strong>toLocaleDateString()</strong>, <strong>toLocaleTimeString()</strong>, serta menggunakan pustaka seperti <strong>Intl.DateTimeFormat</strong> untuk memformat tanggal dalam berbagai cara sesuai dengan kebutuhan lokal atau format yang diinginkan.
-            </p>
-        </div>
+    
+        <!-- MATERI -->
+        <div class="overflow-y-auto w-screen">
+            <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
+                <div class="text-5xl font-bold">
+                    JavaScript Reserved Words
+                    <p class="text-xl py-5 font-normal">
+                        Reserved words adalah kata-kata yang sudah memiliki makna khusus dalam JavaScript dan tidak dapat digunakan sebagai nama variabel, fungsi, atau objek.
+                    </p>
+                </div>
 
-        <div class="text-5xl pt-14 font-bold">
-            Menggunakan toLocaleDateString() dan toLocaleTimeString()
-            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
-                <li><strong>toLocaleDateString()</strong>: Mengonversi tanggal menjadi string yang terformat sesuai dengan lokal tertentu.</li>
-                <li><strong>toLocaleTimeString()</strong>: Mengonversi waktu menjadi string terformat sesuai dengan lokal tertentu.</li>
-                <li>Kedua metode ini memberikan fleksibilitas dalam memformat tanggal dan waktu sesuai dengan standar lokal, seperti format tanggal di Amerika Serikat (MM/DD/YYYY) atau di Eropa (DD/MM/YYYY).</li>
-            </ul>
-            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                const currentDate = new Date();<br><br>
-                <span class="pl-4">console.log(currentDate.toLocaleDateString('en-US')); // Output: 12/24/2024</span><br>
-                <span class="pl-4">console.log(currentDate.toLocaleDateString('en-GB')); // Output: 24/12/2024</span><br><br>
-                <span class="pl-4">console.log(currentDate.toLocaleTimeString('en-US')); // Output: 10:30:45 AM</span><br>
-                <span class="pl-4">console.log(currentDate.toLocaleTimeString('fr-FR')); // Output: 10:30:45</span><br>
+                <div class="text-5xl pt-14 font-bold">
+                    Kategori Reserved Words
+                    <ul class="list-decimal list-inside text-2xl ol font-semibold py-5 ">
+                        <li>
+                            Keywords<br>
+                            Kata-kata yang memiliki makna khusus dalam JavaScript, seperti:
+                            <ul class="list-inside list-disc text-xl font-normal">
+                                <li>if, else, for, while, return, function</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Data Types<br>
+                            Kata-kata yang digunakan untuk mendeklarasikan tipe data:
+                            <ul class="list-inside list-disc text-xl font-normal">
+                                <li>null, true, false, undefined</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Control Flow<br>
+                            Kata-kata untuk kontrol alur dan pengelolaan kode:
+                            <ul class="list-inside list-disc text-xl font-normal">
+                                <li>break, continue, switch, case, default</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Declarations<br>
+                            Kata-kata yang digunakan untuk mendeklarasikan variabel dan fungsi:
+                            <ul class="list-inside list-disc text-xl font-normal">
+                                <li>let, const, var, function</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Object and Array Methods<br>
+                            Kata-kata terkait objek dan array, seperti:
+                            <ul class="list-inside list-disc text-xl font-normal">
+                                <li>this, super</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Class and Module Keywords<br>
+                            Kata-kata yang digunakan dalam sistem kelas dan modul ES6:
+                            <ul class="list-inside list-disc text-xl font-normal">
+                                <li>class, extends, import, export</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="text-5xl pt-14 font-bold">
+                    Daftar Reserved Words di JavaScript
+                    <div class="text-2xl font-normal">
+                        JavaScript memiliki daftar kata-kata yang sudah dipakai oleh mesin JavaScript dan tidak bisa digunakan sembarangan, seperti:
+                    </div>
+                    <ul class="list-disc list-inside text-2xl ol font-normal py-5 ">
+                        <li>abstract, await, enum, finally, interface, private, public, static, dan lain-lain.</li>
+                    </ul>
+                </div>
+
+                <div class="text-5xl py-14 font-bold">
+                    Kesimpulan
+                    <ul class="list-inside text-2xl ol font-normal py-5 ">
+                        <li>Menggunakan reserved words dalam JavaScript sebagai nama variabel atau fungsi dapat menyebabkan error karena kata-kata ini sudah memiliki makna khusus dalam bahasa tersebut. Oleh karena itu, pastikan untuk tidak menggunakan reserved words dalam kode Anda.</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-
-        <div class="text-5xl pt-14 font-bold">
-            Menggunakan Intl.DateTimeFormat()
-            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
-                <li><strong>Intl.DateTimeFormat()</strong> adalah konstruktor yang memungkinkan Anda memformat tanggal dan waktu menggunakan opsi format yang lebih terperinci.</li>
-                <li>Dengan menggunakan <strong>Intl.DateTimeFormat</strong>, Anda bisa menentukan format tanggal dan waktu dengan kontrol lebih lanjut seperti menentukan apakah Anda ingin menampilkan hari dalam seminggu, bulan dalam angka atau nama bulan, dan banyak lagi.</li>
-            </ul>
-            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                const currentDate = new Date();<br><br>
-                <span class="pl-4">const formatter = new Intl.DateTimeFormat('en-US', {</span><br>
-                <span class="pl-8">year: 'numeric',</span><br>
-                <span class="pl-8">month: 'long',</span><br>
-                <span class="pl-8">day: 'numeric'</span><br>
-                <span class="pl-4">});</span><br>
-                <span class="pl-4">console.log(formatter.format(currentDate)); // Output: December 24, 2024</span><br><br>
-
-                <span class="pl-4">const timeFormatter = new Intl.DateTimeFormat('en-US', {</span><br>
-                <span class="pl-8">hour: 'numeric',</span><br>
-                <span class="pl-8">minute: 'numeric',</span><br>
-                <span class="pl-8">second: 'numeric'</span><br>
-                <span class="pl-4">});</span><br>
-                <span class="pl-4">console.log(timeFormatter.format(currentDate)); // Output: 10:30:45 AM</span><br>
-            </div>
-        </div>
-
-        <div class="text-5xl pt-14 font-bold">
-            Custom Date Formatting
-            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
-                <li>Untuk memformat tanggal dengan cara yang lebih custom, Anda bisa mengekstrak bagian-bagian dari objek <strong>Date</strong> seperti tahun, bulan, dan hari, lalu merangkainya secara manual.</li>
-                <li>Ini memberikan fleksibilitas penuh dalam menentukan urutan elemen dan format lainnya, seperti menambahkan leading zeros atau format 24 jam.</li>
-            </ul>
-            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                const currentDate = new Date();<br><br>
-                <span class="pl-4">let day = currentDate.getDate();</span><br>
-                <span class="pl-4">let month = currentDate.getMonth() + 1; // Month is 0-based</span><br>
-                <span class="pl-4">let year = currentDate.getFullYear();</span><br>
-                <span class="pl-4">let formattedDate = `${month < 10 ? '0' + month : month}/${day < 10 ? '0' + day : day}/${year}`;</span><br>
-                <span class="pl-4">console.log(formattedDate); // Output: 12/24/2024</span><br><br>
-                
-                <span class="pl-4">let hours = currentDate.getHours();</span><br>
-                <span class="pl-4">let minutes = currentDate.getMinutes();</span><br>
-                <span class="pl-4">let seconds = currentDate.getSeconds();</span><br>
-                <span class="pl-4">let formattedTime = `${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`;</span><br>
-                <span class="pl-4">console.log(formattedTime); // Output: 10:30:45</span><br>
-            </div>
-        </div>
-
-        <div class="text-5xl py-14 font-bold">
-            Kesimpulan
-            <ul class="list-disc list-inside text-2xl ol font-normal py-5">
-                <li>JavaScript menyediakan berbagai cara untuk memformat tanggal dan waktu dengan menggunakan metode seperti <strong>toLocaleDateString()</strong> dan <strong>toLocaleTimeString()</strong>.</li>
-                <li>Dengan menggunakan <strong>Intl.DateTimeFormat</strong>, Anda dapat menyesuaikan format tanggal dan waktu sesuai dengan kebutuhan lokal dan keinginan pengguna.</li>
-                <li>Jika Anda membutuhkan format tanggal dan waktu yang lebih khusus, Anda dapat mengekstrak bagian-bagian dari objek <strong>Date</strong> dan menyusunnya sesuai format yang diinginkan.</li>
-            </ul>
-        </div>
-    </div>
-
-
             <!-- FOOTER -->
             <footer class="bg-side-blue text-white py-20">
                 <div class="container mx-auto text-center">
@@ -304,11 +293,11 @@
 
 
 
-     </div>
+    </div>
     <!-- CONTENT END -->
 
     <!-- SCRIPT JS -->
-     <script src="../script.js"></script>
+    <script src="../script.js"></script>
     <!-- SCRIPT JS END -->
 
 </body>

@@ -203,90 +203,72 @@
             <li><a href="./JS_performance.html" class="block p-2 hover:bg-back-blue rounded w-full text-left">JS Performance</a></li>
             <li><a href="./JS_reserved_words.html" class="block p-2 hover:bg-back-blue rounded w-full text-left">JS Reserved Words</a></li>
      
-       <!-- MATERI -->
-<div class="overflow-y-auto w-screen">
-    <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
-        <!-- MATERI KALIAN DISINI YAAAAA!!!!!! -->
-        <div class="text-5xl font-bold">
-            JavaScript Date Format
-            <p class="text-xl py-5 font-normal">
-                JavaScript menyediakan beberapa cara untuk memformat tanggal dan waktu. Anda dapat menggunakan metode seperti <strong>toLocaleDateString()</strong>, <strong>toLocaleTimeString()</strong>, serta menggunakan pustaka seperti <strong>Intl.DateTimeFormat</strong> untuk memformat tanggal dalam berbagai cara sesuai dengan kebutuhan lokal atau format yang diinginkan.
-            </p>
-        </div>
+        <!-- MATERI -->
+        <div class="overflow-y-auto w-screen">
+            <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
+                <div class="text-5xl font-bold">
+                    JavaScript Arrow Function
+                    <p class="text-xl py-5 font-normal">
+                        Arrow function adalah cara singkat untuk mendeklarasikan fungsi di JavaScript. Diperkenalkan di ES6, arrow function menggunakan sintaksis => sebagai pengganti kata kunci function.
+                    </p>
+                </div>
 
-        <div class="text-5xl pt-14 font-bold">
-            Menggunakan toLocaleDateString() dan toLocaleTimeString()
-            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
-                <li><strong>toLocaleDateString()</strong>: Mengonversi tanggal menjadi string yang terformat sesuai dengan lokal tertentu.</li>
-                <li><strong>toLocaleTimeString()</strong>: Mengonversi waktu menjadi string terformat sesuai dengan lokal tertentu.</li>
-                <li>Kedua metode ini memberikan fleksibilitas dalam memformat tanggal dan waktu sesuai dengan standar lokal, seperti format tanggal di Amerika Serikat (MM/DD/YYYY) atau di Eropa (DD/MM/YYYY).</li>
-            </ul>
-            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                const currentDate = new Date();<br><br>
-                <span class="pl-4">console.log(currentDate.toLocaleDateString('en-US')); // Output: 12/24/2024</span><br>
-                <span class="pl-4">console.log(currentDate.toLocaleDateString('en-GB')); // Output: 24/12/2024</span><br><br>
-                <span class="pl-4">console.log(currentDate.toLocaleTimeString('en-US')); // Output: 10:30:45 AM</span><br>
-                <span class="pl-4">console.log(currentDate.toLocaleTimeString('fr-FR')); // Output: 10:30:45</span><br>
+                <div class="text-5xl pt-14 font-bold">
+                    Sintaksis Arrow Function
+                    <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                        const functionName = (parameter1, parameter2, ...) => {<br>
+                        <span class="pl-4">// kode fungsi<br>
+                        };
+                    </div>
+                    <ul class="list-disc list-inside text-2xl ol font-semibold py-5 ">
+                        <li>
+                            Jika fungsi hanya memiliki satu baris kode atau satu nilai yang dikembalikan, kurung kurawal {} dan kata kunci return dapat dihilangkan.
+                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                                const add = (a, b) => a + b;
+                            </div>
+                        </li>
+                        <li>
+                            Jika tidak ada parameter, gunakan tanda kurung kosong ().
+                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                                const greet = () => "Hello!";
+                            </div>
+                        </li>
+                        <li>
+                            ika hanya satu parameter, tanda kurung juga dapat dihilangkan.
+                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl mt-5">
+                                const square = x => x * x;
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="text-5xl pt-14 font-bold">
+                    Kelebihan Arrow Function
+                    <ul class="list-decimal list-inside text-2xl ol font-normal py-5 ">
+                        <li>Sintaksis lebih singkat dan mudah dibaca.</li>
+                        <li>Mewarisi this dari lingkup luar, menghindari kebingungan dalam penggunaan this.</li>
+                        <li>Cocok untuk fungsi-fungsi sederhana.</li>
+                    </ul>
+                </div>
+
+                <div class="text-5xl pt-14 font-bold">
+                    Kekurangan Arrow Function
+                    <ul class="list-decimal list-inside text-2xl ol font-normal py-5 ">
+                        <li>Tidak dapat digunakan sebagai konstruktor.</li>
+                        <li>Tidak memiliki objek arguments, super, atau new.target.</li>
+                        <li>Tidak cocok jika membutuhkan this yang fleksibel.</li>
+                    </ul>
+                </div>
+
+                <div class="text-5xl py-14 font-bold">
+                    Kesimpulan
+                    <ul class="list-disc list-inside text-2xl ol font-normal py-5 ">
+                        <li>Arrow function adalah cara ringkas untuk mendeklarasikan fungsi.</li>
+                        <li>Mewarisi this dari lingkup tempat ia dideklarasikan.</li>
+                        <li>Gunakan arrow function untuk fungsi sederhana, dan fungsi biasa untuk kebutuhan kompleks seperti penggunaan this atau arguments.</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-
-        <div class="text-5xl pt-14 font-bold">
-            Menggunakan Intl.DateTimeFormat()
-            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
-                <li><strong>Intl.DateTimeFormat()</strong> adalah konstruktor yang memungkinkan Anda memformat tanggal dan waktu menggunakan opsi format yang lebih terperinci.</li>
-                <li>Dengan menggunakan <strong>Intl.DateTimeFormat</strong>, Anda bisa menentukan format tanggal dan waktu dengan kontrol lebih lanjut seperti menentukan apakah Anda ingin menampilkan hari dalam seminggu, bulan dalam angka atau nama bulan, dan banyak lagi.</li>
-            </ul>
-            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                const currentDate = new Date();<br><br>
-                <span class="pl-4">const formatter = new Intl.DateTimeFormat('en-US', {</span><br>
-                <span class="pl-8">year: 'numeric',</span><br>
-                <span class="pl-8">month: 'long',</span><br>
-                <span class="pl-8">day: 'numeric'</span><br>
-                <span class="pl-4">});</span><br>
-                <span class="pl-4">console.log(formatter.format(currentDate)); // Output: December 24, 2024</span><br><br>
-
-                <span class="pl-4">const timeFormatter = new Intl.DateTimeFormat('en-US', {</span><br>
-                <span class="pl-8">hour: 'numeric',</span><br>
-                <span class="pl-8">minute: 'numeric',</span><br>
-                <span class="pl-8">second: 'numeric'</span><br>
-                <span class="pl-4">});</span><br>
-                <span class="pl-4">console.log(timeFormatter.format(currentDate)); // Output: 10:30:45 AM</span><br>
-            </div>
-        </div>
-
-        <div class="text-5xl pt-14 font-bold">
-            Custom Date Formatting
-            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
-                <li>Untuk memformat tanggal dengan cara yang lebih custom, Anda bisa mengekstrak bagian-bagian dari objek <strong>Date</strong> seperti tahun, bulan, dan hari, lalu merangkainya secara manual.</li>
-                <li>Ini memberikan fleksibilitas penuh dalam menentukan urutan elemen dan format lainnya, seperti menambahkan leading zeros atau format 24 jam.</li>
-            </ul>
-            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                const currentDate = new Date();<br><br>
-                <span class="pl-4">let day = currentDate.getDate();</span><br>
-                <span class="pl-4">let month = currentDate.getMonth() + 1; // Month is 0-based</span><br>
-                <span class="pl-4">let year = currentDate.getFullYear();</span><br>
-                <span class="pl-4">let formattedDate = `${month < 10 ? '0' + month : month}/${day < 10 ? '0' + day : day}/${year}`;</span><br>
-                <span class="pl-4">console.log(formattedDate); // Output: 12/24/2024</span><br><br>
-                
-                <span class="pl-4">let hours = currentDate.getHours();</span><br>
-                <span class="pl-4">let minutes = currentDate.getMinutes();</span><br>
-                <span class="pl-4">let seconds = currentDate.getSeconds();</span><br>
-                <span class="pl-4">let formattedTime = `${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`;</span><br>
-                <span class="pl-4">console.log(formattedTime); // Output: 10:30:45</span><br>
-            </div>
-        </div>
-
-        <div class="text-5xl py-14 font-bold">
-            Kesimpulan
-            <ul class="list-disc list-inside text-2xl ol font-normal py-5">
-                <li>JavaScript menyediakan berbagai cara untuk memformat tanggal dan waktu dengan menggunakan metode seperti <strong>toLocaleDateString()</strong> dan <strong>toLocaleTimeString()</strong>.</li>
-                <li>Dengan menggunakan <strong>Intl.DateTimeFormat</strong>, Anda dapat menyesuaikan format tanggal dan waktu sesuai dengan kebutuhan lokal dan keinginan pengguna.</li>
-                <li>Jika Anda membutuhkan format tanggal dan waktu yang lebih khusus, Anda dapat mengekstrak bagian-bagian dari objek <strong>Date</strong> dan menyusunnya sesuai format yang diinginkan.</li>
-            </ul>
-        </div>
-    </div>
-
-
             <!-- FOOTER -->
             <footer class="bg-side-blue text-white py-20">
                 <div class="container mx-auto text-center">

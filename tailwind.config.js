@@ -8,7 +8,8 @@ module.exports = {
       colors: {
         'back-blue' : '#004FA6',
         'dasar' : '#F7F7F8',
-        'side-blue' : '#012F6D'
+        'side-blue' : '#012F6D',
+        'card' : '#012F6D'
       },
     },
   },
