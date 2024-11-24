@@ -40,7 +40,7 @@
 
     <!-- CONTENT -->
 
-    <!-- SIDEBAR FOR MOBILE -->
+   <!-- SIDEBAR FOR MOBILE -->
 <div id="dropdown" class="w-64 h-screen pb-16 bg-side-blue text-white p-4 overflow-y-auto hidden lg:hidden fixed z-10">
     <h2 class="text-2xl font-semibold mb-8">JS Tutorial</h2>
     <ul class="space-y-2">
@@ -204,76 +204,92 @@
     </div>
     <!-- SIDE BAR END -->
      
-        <!-- MATERI -->
-        <div class="overflow-y-auto w-screen">
-            <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
-                <div class="text-5xl font-bold">
-                    JavaScript Scope
-                    <p class="text-xl py-5 font-normal">
-                        Scope adalah ruang lingkup di mana variabel didefinisikan dan dapat diakses. Dalam JavaScript, scope menentukan visibilitas atau aksesibilitas variabel.
-                    </p>
-                </div>
+       <!-- MATERI -->
+<div class="overflow-y-auto w-screen">
+    <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
+        <!-- MATERI KALIAN DISINI YAAAAA!!!!!! -->
+        <div class="text-5xl font-bold">
+            JavaScript Booleans
+            <p class="text-xl py-5 font-normal">
+                JavaScript boolean adalah tipe data yang hanya memiliki dua nilai: <strong>true</strong> atau <strong>false</strong>. Boolean biasanya digunakan untuk membuat logika program, kondisi, dan pengambilan keputusan.
+            </p>
+        </div>
 
-                <div class="text-5xl pt-14 font-bold">
-                    Jenis-Jenis Scope di JavaScript
-                    <ul class="list-decimal list-inside text-2xl ol font-semibold py-5 ">
-                        <li>
-                            Global Scope
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan di luar fungsi memiliki global scope.</li>
-                                <li>Dapat diakses dari mana saja, baik di dalam fungsi maupun di luar fungsi.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                                let globalVar = "I am global";<br><br>
-                            
-                                function example() {<br>
-                                <span class="pl-4">console.log(globalVar); // Output: I am global</span><br>
-                                }
-                            </div>
-                        </li>
-                        <li>
-                            Local Scope (Function Scope)
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan di dalam fungsi hanya bisa diakses di dalam fungsi tersebut.</li>
-                                <li>Tidak bisa diakses dari luar fungsi.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                                function example() {<br>
-                                    <span class="pl-4">let localVar = "I am local";</span><br>
-                                    <span class="pl-4">console.log(localVar); // Output: I am local</span><br>
-                                }<br><br>
-                                
-                                console.log(localVar); // Error: localVar is not defined
-                            </div>
-                        </li>
-                        <li>
-                            Block Scope (diperkenalkan dengan let dan const)
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan dengan let atau const di dalam blok {} hanya bisa diakses di dalam blok tersebut.</li>
-                                <li>Tidak berlaku untuk var, yang bersifat function-scoped atau global-scoped.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl mt-5">
-                                function example() {<br>
-                                    <span class="pl-4">let localVar = "I am local";</span><br>
-                                    <span class="pl-4">console.log(localVar); // Output: I am local</span><br>
-                                }<br><br>
-                                
-                                console.log(localVar); // Error: localVar is not defined
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+        <div class="text-5xl pt-14 font-bold">
+            Pengertian Booleans
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Boolean hanya memiliki dua nilai: <strong>true</strong> (benar) dan <strong>false</strong> (salah).</li>
+                <li>Boolean sering digunakan dalam kondisi seperti pernyataan <strong>if</strong>, <strong>while</strong>, atau operator logika.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                let isJavaScriptFun = true;<br>
+                let isTired = false;<br><br>
 
-                <div class="text-5xl py-14 font-bold">
-                    Kesimpulan
-                    <ul class="list-disc list-inside text-2xl ol font-normal py-5 ">
-                        <li>Global Scope: Untuk variabel yang digunakan secara global.</li>
-                        <li>Local/Function Scope: Untuk variabel di dalam fungsi.</li>
-                        <li>Block Scope: Untuk variabel let dan const di dalam {}.</li>
-                        <li>Gunakan let atau const untuk mencegah kesalahan yang terkait dengan hoisting dan scope leakage.</li>
-                    </ul>
-                </div>
+                console.log(isJavaScriptFun); // Output: true<br>
+                console.log(isTired); // Output: false<br>
             </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Boolean dari Ekspresi
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Ekspresi dalam JavaScript dapat menghasilkan nilai boolean.</li>
+                <li>Operator perbandingan seperti <strong>==</strong>, <strong>===</strong>, <strong>!=</strong>, dan <strong>&lt;</strong> menghasilkan boolean.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                console.log(10 > 5); // Output: true<br>
+                console.log(10 < 5); // Output: false<br>
+                console.log("apple" === "apple"); // Output: true<br>
+                console.log("apple" === "orange"); // Output: false<br>
+            </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Boolean dari Nilai
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Beberapa nilai secara otomatis dikonversi menjadi <strong>true</strong> atau <strong>false</strong> dalam konteks boolean.</li>
+                <li>Nilai yang dianggap <strong>falsy</strong>: 0, "", null, undefined, NaN.</li>
+                <li>Nilai yang dianggap <strong>truthy</strong>: Semua nilai selain falsy.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                console.log(Boolean(0)); // Output: false<br>
+                console.log(Boolean("")); // Output: false<br>
+                console.log(Boolean(null)); // Output: false<br>
+                console.log(Boolean(undefined)); // Output: false<br><br>
+
+                console.log(Boolean(42)); // Output: true<br>
+                console.log(Boolean("hello")); // Output: true<br>
+            </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Menggunakan Boolean di Kondisi
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Boolean sering digunakan untuk membuat kondisi dalam pernyataan <strong>if</strong>.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                let isRaining = true;<br>
+                if (isRaining) {<br>
+                    <span class="pl-4">console.log("Bawa payung!");</span><br>
+                } else {<br>
+                    <span class="pl-4">console.log("Tidak perlu payung.");</span><br>
+                }<br><br>
+                // Output: Bawa payung! (jika isRaining true)
+            </div>
+        </div>
+
+        <div class="text-5xl py-14 font-bold">
+            Kesimpulan
+            <ul class="list-disc list-inside text-2xl ol font-normal py-5">
+                <li>Boolean memiliki dua nilai: <strong>true</strong> dan <strong>false</strong>.</li>
+                <li>Boolean sering digunakan dalam logika program dan pengambilan keputusan.</li>
+                <li>Nilai seperti 0, "", null, undefined, dan NaN dianggap falsy.</li>
+                <li>Gunakan boolean untuk menyederhanakan logika program Anda.</li>
+            </ul>
+        </div>
+    </div>
+
+
             <!-- FOOTER -->
             <footer class="bg-side-blue text-white py-20">
                 <div class="container mx-auto text-center">

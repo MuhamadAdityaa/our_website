@@ -203,77 +203,102 @@
          </ul>
     </div>
     <!-- SIDE BAR END -->
-     
+    
         <!-- MATERI -->
-        <div class="overflow-y-auto w-screen">
-            <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
-                <div class="text-5xl font-bold">
-                    JavaScript Scope
-                    <p class="text-xl py-5 font-normal">
-                        Scope adalah ruang lingkup di mana variabel didefinisikan dan dapat diakses. Dalam JavaScript, scope menentukan visibilitas atau aksesibilitas variabel.
-                    </p>
-                </div>
-
-                <div class="text-5xl pt-14 font-bold">
-                    Jenis-Jenis Scope di JavaScript
-                    <ul class="list-decimal list-inside text-2xl ol font-semibold py-5 ">
-                        <li>
-                            Global Scope
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan di luar fungsi memiliki global scope.</li>
-                                <li>Dapat diakses dari mana saja, baik di dalam fungsi maupun di luar fungsi.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                                let globalVar = "I am global";<br><br>
-                            
-                                function example() {<br>
-                                <span class="pl-4">console.log(globalVar); // Output: I am global</span><br>
-                                }
-                            </div>
-                        </li>
-                        <li>
-                            Local Scope (Function Scope)
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan di dalam fungsi hanya bisa diakses di dalam fungsi tersebut.</li>
-                                <li>Tidak bisa diakses dari luar fungsi.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                                function example() {<br>
-                                    <span class="pl-4">let localVar = "I am local";</span><br>
-                                    <span class="pl-4">console.log(localVar); // Output: I am local</span><br>
-                                }<br><br>
-                                
-                                console.log(localVar); // Error: localVar is not defined
-                            </div>
-                        </li>
-                        <li>
-                            Block Scope (diperkenalkan dengan let dan const)
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan dengan let atau const di dalam blok {} hanya bisa diakses di dalam blok tersebut.</li>
-                                <li>Tidak berlaku untuk var, yang bersifat function-scoped atau global-scoped.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl mt-5">
-                                function example() {<br>
-                                    <span class="pl-4">let localVar = "I am local";</span><br>
-                                    <span class="pl-4">console.log(localVar); // Output: I am local</span><br>
-                                }<br><br>
-                                
-                                console.log(localVar); // Error: localVar is not defined
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="text-5xl py-14 font-bold">
-                    Kesimpulan
-                    <ul class="list-disc list-inside text-2xl ol font-normal py-5 ">
-                        <li>Global Scope: Untuk variabel yang digunakan secara global.</li>
-                        <li>Local/Function Scope: Untuk variabel di dalam fungsi.</li>
-                        <li>Block Scope: Untuk variabel let dan const di dalam {}.</li>
-                        <li>Gunakan let atau const untuk mencegah kesalahan yang terkait dengan hoisting dan scope leakage.</li>
-                    </ul>
-                </div>
+<div class="overflow-y-auto w-screen">
+    <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
+        <!-- MATERI KALIAN DISINI YAAAAA!!!!!! -->
+        <div class="text-5xl font-bold">
+            JavaScript Array Search
+            <p class="text-xl py-5 font-normal">
+                JavaScript menyediakan beberapa metode untuk mencari elemen dalam array. Dengan menggunakan metode-metode ini, Anda bisa menemukan elemen dengan mudah dan efisien berdasarkan kondisi tertentu.
+            </p>
+        </div>
+        
+        <div class="text-5xl pt-14 font-bold">
+            indexOf()
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Mencari indeks pertama dari elemen yang diberikan dalam array. Mengembalikan -1 jika elemen tidak ditemukan.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                let fruits = ["Apple", "Banana", "Cherry"];<br><br>
+                <span class="pl-4">let index = fruits.indexOf("Banana");</span><br>
+                <span class="pl-4">console.log(index); // Output: 1</span><br><br>
+                
+                <span class="pl-4">let notFound = fruits.indexOf("Grapes");</span><br>
+                <span class="pl-4">console.log(notFound); // Output: -1</span><br>
             </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            lastIndexOf()
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Mencari indeks terakhir dari elemen yang diberikan dalam array. Mengembalikan -1 jika elemen tidak ditemukan.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                let fruits = ["Apple", "Banana", "Cherry", "Banana"];<br><br>
+                <span class="pl-4">let lastIndex = fruits.lastIndexOf("Banana");</span><br>
+                <span class="pl-4">console.log(lastIndex); // Output: 3</span><br><br>
+                
+                <span class="pl-4">let notFound = fruits.lastIndexOf("Grapes");</span><br>
+                <span class="pl-4">console.log(notFound); // Output: -1</span><br>
+            </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            find()
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Mencari elemen pertama dalam array yang memenuhi kondisi yang ditentukan dalam fungsi callback.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                let numbers = [5, 10, 15, 20];<br><br>
+                <span class="pl-4">let found = numbers.find(function(number) {</span><br>
+                <span class="pl-8">return number > 10;</span><br>
+                <span class="pl-4">});</span><br>
+                <span class="pl-4">console.log(found); // Output: 15</span><br>
+            </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            findIndex()
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Mencari indeks pertama dalam array yang memenuhi kondisi yang ditentukan dalam fungsi callback. Mengembalikan -1 jika tidak ditemukan.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                let numbers = [5, 10, 15, 20];<br><br>
+                <span class="pl-4">let index = numbers.findIndex(function(number) {</span><br>
+                <span class="pl-8">return number > 10;</span><br>
+                <span class="pl-4">});</span><br>
+                <span class="pl-4">console.log(index); // Output: 2</span><br>
+            </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            includes()
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Memeriksa apakah array mengandung elemen tertentu, mengembalikan <code>true</code> jika ditemukan dan <code>false</code> jika tidak ditemukan.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                let fruits = ["Apple", "Banana", "Cherry"];<br><br>
+                <span class="pl-4">let result = fruits.includes("Banana");</span><br>
+                <span class="pl-4">console.log(result); // Output: true</span><br><br>
+                
+                <span class="pl-4">let notFound = fruits.includes("Grapes");</span><br>
+                <span class="pl-4">console.log(notFound); // Output: false</span><br>
+            </div>
+        </div>
+
+        <div class="text-5xl py-14 font-bold">
+            Kesimpulan
+            <ul class="list-disc list-inside text-2xl ol font-normal py-5">
+                <li>JavaScript menyediakan berbagai metode untuk mencari elemen dalam array, seperti indexOf(), lastIndexOf(), find(), findIndex(), dan includes().</li>
+                <li>Metode-metode ini memungkinkan Anda untuk dengan mudah mencari, menemukan, dan memanipulasi elemen dalam array berdasarkan kondisi tertentu.</li>
+                <li>Penggunaan metode ini sangat berguna dalam berbagai situasi pemrograman ketika Anda membutuhkan pencarian data dalam array.</li>
+            </ul>
+        </div>
+    </div>
+
+
             <!-- FOOTER -->
             <footer class="bg-side-blue text-white py-20">
                 <div class="container mx-auto text-center">

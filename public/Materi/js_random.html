@@ -204,76 +204,80 @@
     </div>
     <!-- SIDE BAR END -->
      
-        <!-- MATERI -->
-        <div class="overflow-y-auto w-screen">
-            <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
-                <div class="text-5xl font-bold">
-                    JavaScript Scope
-                    <p class="text-xl py-5 font-normal">
-                        Scope adalah ruang lingkup di mana variabel didefinisikan dan dapat diakses. Dalam JavaScript, scope menentukan visibilitas atau aksesibilitas variabel.
-                    </p>
-                </div>
+       <!-- MATERI -->
+<div class="overflow-y-auto w-screen">
+    <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
+        <!-- MATERI KALIAN DISINI YAAAAA!!!!!! -->
+        <div class="text-5xl font-bold">
+            JavaScript Random
+            <p class="text-xl py-5 font-normal">
+                JavaScript menyediakan metode bawaan <strong>Math.random()</strong> untuk menghasilkan angka acak antara 0 (inklusif) dan 1 (eksklusif). Angka acak ini dapat digunakan untuk berbagai keperluan seperti permainan, pengacakan data, atau simulasi.
+            </p>
+        </div>
 
-                <div class="text-5xl pt-14 font-bold">
-                    Jenis-Jenis Scope di JavaScript
-                    <ul class="list-decimal list-inside text-2xl ol font-semibold py-5 ">
-                        <li>
-                            Global Scope
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan di luar fungsi memiliki global scope.</li>
-                                <li>Dapat diakses dari mana saja, baik di dalam fungsi maupun di luar fungsi.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                                let globalVar = "I am global";<br><br>
-                            
-                                function example() {<br>
-                                <span class="pl-4">console.log(globalVar); // Output: I am global</span><br>
-                                }
-                            </div>
-                        </li>
-                        <li>
-                            Local Scope (Function Scope)
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan di dalam fungsi hanya bisa diakses di dalam fungsi tersebut.</li>
-                                <li>Tidak bisa diakses dari luar fungsi.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                                function example() {<br>
-                                    <span class="pl-4">let localVar = "I am local";</span><br>
-                                    <span class="pl-4">console.log(localVar); // Output: I am local</span><br>
-                                }<br><br>
-                                
-                                console.log(localVar); // Error: localVar is not defined
-                            </div>
-                        </li>
-                        <li>
-                            Block Scope (diperkenalkan dengan let dan const)
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan dengan let atau const di dalam blok {} hanya bisa diakses di dalam blok tersebut.</li>
-                                <li>Tidak berlaku untuk var, yang bersifat function-scoped atau global-scoped.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl mt-5">
-                                function example() {<br>
-                                    <span class="pl-4">let localVar = "I am local";</span><br>
-                                    <span class="pl-4">console.log(localVar); // Output: I am local</span><br>
-                                }<br><br>
-                                
-                                console.log(localVar); // Error: localVar is not defined
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="text-5xl py-14 font-bold">
-                    Kesimpulan
-                    <ul class="list-disc list-inside text-2xl ol font-normal py-5 ">
-                        <li>Global Scope: Untuk variabel yang digunakan secara global.</li>
-                        <li>Local/Function Scope: Untuk variabel di dalam fungsi.</li>
-                        <li>Block Scope: Untuk variabel let dan const di dalam {}.</li>
-                        <li>Gunakan let atau const untuk mencegah kesalahan yang terkait dengan hoisting dan scope leakage.</li>
-                    </ul>
-                </div>
+        <div class="text-5xl pt-14 font-bold">
+            Dasar Math.random()
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li><strong>Math.random()</strong> menghasilkan angka acak antara 0 (inklusif) dan 1 (eksklusif).</li>
+                <li>Untuk menghasilkan angka acak dalam rentang tertentu, Anda dapat mengalikan hasilnya dan menggunakan metode pembulatan seperti <strong>Math.floor()</strong>.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                console.log(Math.random()); // Output: Angka acak antara 0 dan 1<br><br>
+                // Angka acak antara 0 dan 10:<br>
+                console.log(Math.random() * 10); // Output: Angka acak antara 0 dan 10<br>
             </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Membuat Angka Acak dalam Rentang Tertentu
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Untuk menghasilkan angka acak dalam rentang tertentu, gunakan formula berikut:</li>
+                <li><strong>Math.floor(Math.random() * (max - min + 1)) + min;</strong></li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                // Angka acak antara 1 dan 10:<br>
+                console.log(Math.floor(Math.random() * 10) + 1); // Output: 1-10<br><br>
+                // Angka acak antara 5 dan 15:<br>
+                console.log(Math.floor(Math.random() * (15 - 5 + 1)) + 5); // Output: 5-15<br>
+            </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Menggunakan Random untuk Pilihan
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Anda dapat menggunakan angka acak untuk memilih elemen secara acak dari array.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                let items = ["Apple", "Banana", "Cherry", "Mango"];<br>
+                let randomIndex = Math.floor(Math.random() * items.length);<br>
+                console.log(items[randomIndex]); // Output: Elemen acak dari array<br>
+            </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Simulasi dengan Random
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Metode <strong>Math.random()</strong> sering digunakan untuk simulasi seperti pelemparan dadu, permainan, atau pembuatan ID unik.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                // Simulasi pelemparan dadu:<br>
+                console.log(Math.floor(Math.random() * 6) + 1); // Output: 1-6<br><br>
+                // Membuat ID unik:<br>
+                let uniqueID = "ID-" + Math.floor(Math.random() * 1000000);<br>
+                console.log(uniqueID); // Output: ID-xxxxxx<br>
+            </div>
+        </div>
+
+        <div class="text-5xl py-14 font-bold">
+            Kesimpulan
+            <ul class="list-disc list-inside text-2xl ol font-normal py-5">
+                <li><strong>Math.random()</strong> menghasilkan angka acak antara 0 dan 1.</li>
+                <li>Untuk rentang tertentu, gunakan formula <strong>Math.floor(Math.random() * (max - min + 1)) + min;</strong></li>
+                <li>Angka acak sangat berguna dalam simulasi, permainan, atau memilih elemen dari array.</li>
+            </ul>
+        </div>
+    </div>
+
             <!-- FOOTER -->
             <footer class="bg-side-blue text-white py-20">
                 <div class="container mx-auto text-center">

@@ -40,7 +40,7 @@
 
     <!-- CONTENT -->
 
-    <!-- SIDEBAR FOR MOBILE -->
+   <!-- SIDEBAR FOR MOBILE -->
 <div id="dropdown" class="w-64 h-screen pb-16 bg-side-blue text-white p-4 overflow-y-auto hidden lg:hidden fixed z-10">
     <h2 class="text-2xl font-semibold mb-8">JS Tutorial</h2>
     <ul class="space-y-2">
@@ -204,76 +204,110 @@
     </div>
     <!-- SIDE BAR END -->
      
-        <!-- MATERI -->
-        <div class="overflow-y-auto w-screen">
-            <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
-                <div class="text-5xl font-bold">
-                    JavaScript Scope
-                    <p class="text-xl py-5 font-normal">
-                        Scope adalah ruang lingkup di mana variabel didefinisikan dan dapat diakses. Dalam JavaScript, scope menentukan visibilitas atau aksesibilitas variabel.
-                    </p>
-                </div>
+       <!-- MATERI -->
+<div class="overflow-y-auto w-screen">
+    <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
+        <!-- MATERI KALIAN DISINI YAAAAA!!!!!! -->
+        <div class="text-5xl font-bold">
+            JavaScript Array Iteration
+            <p class="text-xl py-5 font-normal">
+                JavaScript menyediakan berbagai cara untuk melakukan iterasi (perulangan) pada array. Metode-metode ini memungkinkan Anda untuk mengakses dan memanipulasi elemen-elemen dalam array satu per satu.
+            </p>
+        </div>
 
-                <div class="text-5xl pt-14 font-bold">
-                    Jenis-Jenis Scope di JavaScript
-                    <ul class="list-decimal list-inside text-2xl ol font-semibold py-5 ">
-                        <li>
-                            Global Scope
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan di luar fungsi memiliki global scope.</li>
-                                <li>Dapat diakses dari mana saja, baik di dalam fungsi maupun di luar fungsi.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                                let globalVar = "I am global";<br><br>
-                            
-                                function example() {<br>
-                                <span class="pl-4">console.log(globalVar); // Output: I am global</span><br>
-                                }
-                            </div>
-                        </li>
-                        <li>
-                            Local Scope (Function Scope)
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan di dalam fungsi hanya bisa diakses di dalam fungsi tersebut.</li>
-                                <li>Tidak bisa diakses dari luar fungsi.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                                function example() {<br>
-                                    <span class="pl-4">let localVar = "I am local";</span><br>
-                                    <span class="pl-4">console.log(localVar); // Output: I am local</span><br>
-                                }<br><br>
-                                
-                                console.log(localVar); // Error: localVar is not defined
-                            </div>
-                        </li>
-                        <li>
-                            Block Scope (diperkenalkan dengan let dan const)
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan dengan let atau const di dalam blok {} hanya bisa diakses di dalam blok tersebut.</li>
-                                <li>Tidak berlaku untuk var, yang bersifat function-scoped atau global-scoped.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl mt-5">
-                                function example() {<br>
-                                    <span class="pl-4">let localVar = "I am local";</span><br>
-                                    <span class="pl-4">console.log(localVar); // Output: I am local</span><br>
-                                }<br><br>
-                                
-                                console.log(localVar); // Error: localVar is not defined
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+        <div class="text-5xl pt-14 font-bold">
+            Pengertian Array Iteration
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Array Iteration adalah proses untuk mengakses setiap elemen dalam array secara berurutan.</li>
+                <li>Berbagai metode iterasi memungkinkan Anda untuk menjalankan fungsi tertentu untuk setiap elemen dalam array.</li>
+            </ul>
+        </div>
 
-                <div class="text-5xl py-14 font-bold">
-                    Kesimpulan
-                    <ul class="list-disc list-inside text-2xl ol font-normal py-5 ">
-                        <li>Global Scope: Untuk variabel yang digunakan secara global.</li>
-                        <li>Local/Function Scope: Untuk variabel di dalam fungsi.</li>
-                        <li>Block Scope: Untuk variabel let dan const di dalam {}.</li>
-                        <li>Gunakan let atau const untuk mencegah kesalahan yang terkait dengan hoisting dan scope leakage.</li>
-                    </ul>
-                </div>
+        <div class="text-5xl pt-14 font-bold">
+            Menggunakan for Loop
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Metode yang paling dasar untuk mengiterasi array adalah menggunakan <strong>for loop</strong>.</li>
+                <li>Dengan <strong>for loop</strong>, Anda dapat mengakses setiap elemen array menggunakan indeks.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                let fruits = ["Apple", "Banana", "Cherry"];<br><br>
+                <span class="pl-4">for (let i = 0; i < fruits.length; i++) {</span><br>
+                <span class="pl-8">console.log(fruits[i]); // Output: Apple, Banana, Cherry</span><br>
+                <span class="pl-4">}</span><br>
             </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Menggunakan forEach()
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li><strong>forEach()</strong> adalah metode yang lebih modern untuk mengiterasi array.</li>
+                <li>Metode ini menjalankan fungsi untuk setiap elemen dalam array tanpa menggunakan indeks secara eksplisit.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                let fruits = ["Apple", "Banana", "Cherry"];<br><br>
+                <span class="pl-4">fruits.forEach(function(fruit) {</span><br>
+                <span class="pl-8">console.log(fruit); // Output: Apple, Banana, Cherry</span><br>
+                <span class="pl-4">});</span><br>
+            </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Menggunakan map()
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li><strong>map()</strong> digunakan untuk mengiterasi array dan membuat array baru dengan elemen yang telah dimodifikasi.</li>
+                <li>Berbeda dengan <strong>forEach()</strong>, <strong>map()</strong> menghasilkan array baru berdasarkan hasil iterasi.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                let fruits = ["Apple", "Banana", "Cherry"];<br><br>
+                <span class="pl-4">let upperFruits = fruits.map(function(fruit) {</span><br>
+                <span class="pl-8">return fruit.toUpperCase();</span><br>
+                <span class="pl-4">});</span><br>
+                <span class="pl-4">console.log(upperFruits); // Output: ["APPLE", "BANANA", "CHERRY"]</span><br>
+            </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Menggunakan filter()
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li><strong>filter()</strong> digunakan untuk membuat array baru dengan elemen-elemen yang memenuhi kondisi tertentu.</li>
+                <li>Metode ini memungkinkan Anda untuk memfilter elemen berdasarkan kriteria yang Anda tentukan.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                let numbers = [1, 2, 3, 4, 5, 6];<br><br>
+                <span class="pl-4">let evenNumbers = numbers.filter(function(number) {</span><br>
+                <span class="pl-8">return number % 2 === 0;</span><br>
+                <span class="pl-4">});</span><br>
+                <span class="pl-4">console.log(evenNumbers); // Output: [2, 4, 6]</span><br>
+            </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Menggunakan reduce()
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li><strong>reduce()</strong> digunakan untuk mengurangi array menjadi satu nilai tunggal berdasarkan fungsi yang Anda tentukan.</li>
+                <li>Metode ini sering digunakan untuk menghitung jumlah, rata-rata, atau melakukan operasi agregasi lainnya.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                let numbers = [1, 2, 3, 4, 5];<br><br>
+                <span class="pl-4">let sum = numbers.reduce(function(total, number) {</span><br>
+                <span class="pl-8">return total + number;</span><br>
+                <span class="pl-4">}, 0);</span><br>
+                <span class="pl-4">console.log(sum); // Output: 15</span><br>
+            </div>
+        </div>
+
+        <div class="text-5xl py-14 font-bold">
+            Kesimpulan
+            <ul class="list-disc list-inside text-2xl ol font-normal py-5">
+                <li>JavaScript menyediakan berbagai metode untuk melakukan iterasi pada array, termasuk <strong>for loop</strong>, <strong>forEach()</strong>, <strong>map()</strong>, <strong>filter()</strong>, dan <strong>reduce()</strong>.</li>
+                <li>Metode seperti <strong>forEach()</strong> dan <strong>map()</strong> berguna ketika Anda ingin mengiterasi dan memanipulasi elemen array secara langsung.</li>
+                <li>Metode <strong>filter()</strong> memungkinkan Anda untuk membuat array baru dengan elemen yang memenuhi kriteria tertentu.</li>
+                <li><strong>reduce()</strong> adalah cara yang berguna untuk mengagregasi elemen-elemen dalam array menjadi satu nilai.</li>
+            </ul>
+        </div>
+    </div>
+
+
             <!-- FOOTER -->
             <footer class="bg-side-blue text-white py-20">
                 <div class="container mx-auto text-center">

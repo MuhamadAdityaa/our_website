@@ -204,76 +204,98 @@
     </div>
     <!-- SIDE BAR END -->
      
-        <!-- MATERI -->
-        <div class="overflow-y-auto w-screen">
-            <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
-                <div class="text-5xl font-bold">
-                    JavaScript Scope
-                    <p class="text-xl py-5 font-normal">
-                        Scope adalah ruang lingkup di mana variabel didefinisikan dan dapat diakses. Dalam JavaScript, scope menentukan visibilitas atau aksesibilitas variabel.
-                    </p>
-                </div>
+       <!-- MATERI -->
+<div class="overflow-y-auto w-screen">
+    <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
+        <!-- MATERI KALIAN DISINI YAAAAA!!!!!! -->
+        <div class="text-5xl font-bold">
+            JavaScript Dates
+            <p class="text-xl py-5 font-normal">
+                JavaScript menyediakan objek <strong>Date</strong> yang memungkinkan kita untuk bekerja dengan tanggal dan waktu. Dengan objek <strong>Date</strong>, kita bisa mendapatkan tanggal dan waktu saat ini, memanipulasi tanggal, dan format tanggal dalam berbagai cara.
+            </p>
+        </div>
 
-                <div class="text-5xl pt-14 font-bold">
-                    Jenis-Jenis Scope di JavaScript
-                    <ul class="list-decimal list-inside text-2xl ol font-semibold py-5 ">
-                        <li>
-                            Global Scope
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan di luar fungsi memiliki global scope.</li>
-                                <li>Dapat diakses dari mana saja, baik di dalam fungsi maupun di luar fungsi.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                                let globalVar = "I am global";<br><br>
-                            
-                                function example() {<br>
-                                <span class="pl-4">console.log(globalVar); // Output: I am global</span><br>
-                                }
-                            </div>
-                        </li>
-                        <li>
-                            Local Scope (Function Scope)
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan di dalam fungsi hanya bisa diakses di dalam fungsi tersebut.</li>
-                                <li>Tidak bisa diakses dari luar fungsi.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                                function example() {<br>
-                                    <span class="pl-4">let localVar = "I am local";</span><br>
-                                    <span class="pl-4">console.log(localVar); // Output: I am local</span><br>
-                                }<br><br>
-                                
-                                console.log(localVar); // Error: localVar is not defined
-                            </div>
-                        </li>
-                        <li>
-                            Block Scope (diperkenalkan dengan let dan const)
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan dengan let atau const di dalam blok {} hanya bisa diakses di dalam blok tersebut.</li>
-                                <li>Tidak berlaku untuk var, yang bersifat function-scoped atau global-scoped.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl mt-5">
-                                function example() {<br>
-                                    <span class="pl-4">let localVar = "I am local";</span><br>
-                                    <span class="pl-4">console.log(localVar); // Output: I am local</span><br>
-                                }<br><br>
-                                
-                                console.log(localVar); // Error: localVar is not defined
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="text-5xl py-14 font-bold">
-                    Kesimpulan
-                    <ul class="list-disc list-inside text-2xl ol font-normal py-5 ">
-                        <li>Global Scope: Untuk variabel yang digunakan secara global.</li>
-                        <li>Local/Function Scope: Untuk variabel di dalam fungsi.</li>
-                        <li>Block Scope: Untuk variabel let dan const di dalam {}.</li>
-                        <li>Gunakan let atau const untuk mencegah kesalahan yang terkait dengan hoisting dan scope leakage.</li>
-                    </ul>
-                </div>
+        <div class="text-5xl pt-14 font-bold">
+            Pengertian dan Membuat Objek Date
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Untuk membuat objek <strong>Date</strong>, Anda dapat menggunakan kata kunci <strong>new Date()</strong>.</li>
+                <li>Jika Anda tidak memberikan parameter apapun, <strong>new Date()</strong> akan mengembalikan tanggal dan waktu saat ini.</li>
+                <li>Anda dapat juga memberikan parameter untuk menentukan tanggal dan waktu tertentu.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                const currentDate = new Date();<br><br>
+                <span class="pl-4">console.log(currentDate); // Output: current date and time</span><br><br>
+                const specificDate = new Date("2024-12-25");<br>
+                <span class="pl-4">console.log(specificDate); // Output: Wed Dec 25 2024 00:00:00 GMT+0000</span><br>
             </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Mendapatkan Tanggal dan Waktu
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Anda dapat menggunakan metode pada objek Date untuk mendapatkan bagian-bagian tanggal dan waktu seperti tahun, bulan, tanggal, jam, menit, detik, dan milidetik.</li>
+                <li>Beberapa metode yang sering digunakan antara lain: <strong>getFullYear()</strong>, <strong>getMonth()</strong>, <strong>getDate()</strong>, <strong>getHours()</strong>, <strong>getMinutes()</strong>, <strong>getSeconds()</strong>, dan <strong>getMilliseconds()</strong>.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                const currentDate = new Date();<br><br>
+                <span class="pl-4">console.log(currentDate.getFullYear()); // Output: 2024</span><br>
+                <span class="pl-4">console.log(currentDate.getMonth() + 1); // Output: 12 (Months are 0-indexed)</span><br>
+                <span class="pl-4">console.log(currentDate.getDate()); // Output: 24</span><br>
+                <span class="pl-4">console.log(currentDate.getHours()); // Output: current hour</span><br>
+                <span class="pl-4">console.log(currentDate.getMinutes()); // Output: current minute</span><br>
+                <span class="pl-4">console.log(currentDate.getSeconds()); // Output: current second</span><br>
+            </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Mengubah Tanggal dan Waktu
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Anda dapat menggunakan metode seperti <strong>setFullYear()</strong>, <strong>setMonth()</strong>, <strong>setDate()</strong>, <strong>setHours()</strong>, <strong>setMinutes()</strong>, dan <strong>setSeconds()</strong> untuk mengubah bagian-bagian tanggal dan waktu pada objek <strong>Date</strong>.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                const currentDate = new Date();<br><br>
+                <span class="pl-4">currentDate.setFullYear(2025);</span><br>
+                <span class="pl-4">console.log(currentDate.getFullYear()); // Output: 2025</span><br><br>
+                
+                <span class="pl-4">currentDate.setMonth(5); // Mengatur bulan ke Juni (0-11)</span><br>
+                <span class="pl-4">console.log(currentDate.getMonth() + 1); // Output: 6</span><br><br>
+                
+                <span class="pl-4">currentDate.setDate(15);</span><br>
+                <span class="pl-4">console.log(currentDate.getDate()); // Output: 15</span><br><br>
+                
+                <span class="pl-4">currentDate.setHours(10);</span><br>
+                <span class="pl-4">console.log(currentDate.getHours()); // Output: 10</span><br>
+            </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Format Tanggal
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>JavaScript <strong>toLocaleDateString()</strong> dan <strong>toLocaleTimeString()</strong> memungkinkan Anda untuk memformat tanggal dan waktu sesuai dengan lokal tertentu.</li>
+                <li>Metode <strong>toDateString()</strong> dan <strong>toTimeString()</strong> juga dapat digunakan untuk mengonversi objek <strong>Date</strong> menjadi format string standar.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                const currentDate = new Date();<br><br>
+                <span class="pl-4">console.log(currentDate.toLocaleDateString()); // Output: formatted date, e.g., 12/24/2024</span><br>
+                <span class="pl-4">console.log(currentDate.toLocaleTimeString()); // Output: formatted time, e.g., 10:30:45 AM</span><br><br>
+                
+                <span class="pl-4">console.log(currentDate.toDateString()); // Output: Mon Dec 24 2024</span><br>
+                <span class="pl-4">console.log(currentDate.toTimeString()); // Output: 10:30:45 GMT+0000 (UTC)</span><br>
+            </div>
+        </div>
+
+        <div class="text-5xl py-14 font-bold">
+            Kesimpulan
+            <ul class="list-disc list-inside text-2xl ol font-normal py-5">
+                <li>Obyek <strong>Date</strong> di JavaScript memungkinkan kita untuk bekerja dengan tanggal dan waktu dengan fleksibilitas tinggi.</li>
+                <li>Anda dapat membuat objek <strong>Date</strong> dengan tanggal dan waktu saat ini atau dengan menentukan tanggal tertentu.</li>
+                <li>JavaScript menyediakan berbagai metode untuk mengakses, mengubah, dan memformat tanggal dan waktu.</li>
+                <li>Gunakan <strong>toLocaleDateString()</strong> dan <strong>toLocaleTimeString()</strong> untuk memformat tanggal dan waktu sesuai dengan lokal yang diinginkan.</li>
+            </ul>
+        </div>
+    </div>
+
+
             <!-- FOOTER -->
             <footer class="bg-side-blue text-white py-20">
                 <div class="container mx-auto text-center">

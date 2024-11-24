@@ -205,75 +205,98 @@
     <!-- SIDE BAR END -->
      
         <!-- MATERI -->
-        <div class="overflow-y-auto w-screen">
-            <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
-                <div class="text-5xl font-bold">
-                    JavaScript Scope
-                    <p class="text-xl py-5 font-normal">
-                        Scope adalah ruang lingkup di mana variabel didefinisikan dan dapat diakses. Dalam JavaScript, scope menentukan visibilitas atau aksesibilitas variabel.
-                    </p>
-                </div>
+<div class="overflow-y-auto w-screen">
+    <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
+        <!-- MATERI KALIAN DISINI YAAAAA!!!!!! -->
+        <div class="text-5xl font-bold">
+            JavaScript Array Sort
+            <p class="text-xl py-5 font-normal">
+                JavaScript menyediakan metode untuk mengurutkan elemen-elemen dalam array. Dengan menggunakan metode <strong>sort()</strong>, Anda dapat mengurutkan elemen dalam array sesuai dengan urutan yang diinginkan (misalnya, angka atau string).
+            </p>
+        </div>
 
-                <div class="text-5xl pt-14 font-bold">
-                    Jenis-Jenis Scope di JavaScript
-                    <ul class="list-decimal list-inside text-2xl ol font-semibold py-5 ">
-                        <li>
-                            Global Scope
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan di luar fungsi memiliki global scope.</li>
-                                <li>Dapat diakses dari mana saja, baik di dalam fungsi maupun di luar fungsi.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                                let globalVar = "I am global";<br><br>
-                            
-                                function example() {<br>
-                                <span class="pl-4">console.log(globalVar); // Output: I am global</span><br>
-                                }
-                            </div>
-                        </li>
-                        <li>
-                            Local Scope (Function Scope)
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan di dalam fungsi hanya bisa diakses di dalam fungsi tersebut.</li>
-                                <li>Tidak bisa diakses dari luar fungsi.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                                function example() {<br>
-                                    <span class="pl-4">let localVar = "I am local";</span><br>
-                                    <span class="pl-4">console.log(localVar); // Output: I am local</span><br>
-                                }<br><br>
-                                
-                                console.log(localVar); // Error: localVar is not defined
-                            </div>
-                        </li>
-                        <li>
-                            Block Scope (diperkenalkan dengan let dan const)
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan dengan let atau const di dalam blok {} hanya bisa diakses di dalam blok tersebut.</li>
-                                <li>Tidak berlaku untuk var, yang bersifat function-scoped atau global-scoped.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl mt-5">
-                                function example() {<br>
-                                    <span class="pl-4">let localVar = "I am local";</span><br>
-                                    <span class="pl-4">console.log(localVar); // Output: I am local</span><br>
-                                }<br><br>
-                                
-                                console.log(localVar); // Error: localVar is not defined
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="text-5xl py-14 font-bold">
-                    Kesimpulan
-                    <ul class="list-disc list-inside text-2xl ol font-normal py-5 ">
-                        <li>Global Scope: Untuk variabel yang digunakan secara global.</li>
-                        <li>Local/Function Scope: Untuk variabel di dalam fungsi.</li>
-                        <li>Block Scope: Untuk variabel let dan const di dalam {}.</li>
-                        <li>Gunakan let atau const untuk mencegah kesalahan yang terkait dengan hoisting dan scope leakage.</li>
-                    </ul>
-                </div>
+        <div class="text-5xl pt-14 font-bold">
+            Pengertian dan Cara Kerja sort()
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li><strong>sort()</strong> digunakan untuk mengurutkan elemen dalam array.</li>
+                <li>Secara default, <strong>sort()</strong> mengurutkan elemen berdasarkan urutan karakter dalam string.</li>
+                <li>Sort bekerja langsung pada array dan mengubah urutannya (in-place). </li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                let fruits = ["Banana", "Apple", "Cherry", "Mango"];<br><br>
+                <span class="pl-4">fruits.sort(); // Mengurutkan array secara alfabetis</span><br>
+                <span class="pl-4">console.log(fruits); // Output: ["Apple", "Banana", "Cherry", "Mango"]</span><br>
             </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Sort dengan Angka
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Secara default, <strong>sort()</strong> mengurutkan angka sebagai string, yang bisa menghasilkan urutan yang tidak sesuai.</li>
+                <li>Untuk mengurutkan angka dengan benar, Anda perlu memberikan fungsi pembanding.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                let numbers = [10, 5, 100, 50, 1];<br><br>
+                <span class="pl-4">numbers.sort(function(a, b) {</span><br>
+                <span class="pl-8">return a - b;</span><br>
+                <span class="pl-4">});</span><br>
+                <span class="pl-4">console.log(numbers); // Output: [1, 5, 10, 50, 100]</span><br>
+            </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Sort dalam Urutan Menurun
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Anda dapat mengurutkan array dalam urutan menurun dengan mengubah fungsi pembanding menjadi <code>b - a</code>.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                let numbers = [10, 5, 100, 50, 1];<br><br>
+                <span class="pl-4">numbers.sort(function(a, b) {</span><br>
+                <span class="pl-8">return b - a;</span><br>
+                <span class="pl-4">});</span><br>
+                <span class="pl-4">console.log(numbers); // Output: [100, 50, 10, 5, 1]</span><br>
+            </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Sort dengan String
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Jika array berisi string, maka <strong>sort()</strong> akan mengurutkan berdasarkan urutan karakter string.</li>
+                <li>Perhatikan bahwa urutan karakter string berdasarkan nilai Unicode dari karakter-karakter tersebut.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                let words = ["Banana", "Apple", "Orange", "Mango"];<br><br>
+                <span class="pl-4">words.sort();</span><br>
+                <span class="pl-4">console.log(words); // Output: ["Apple", "Banana", "Mango", "Orange"]</span><br>
+            </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Sort dengan Fungsi Pembanding untuk String yang Lebih Kompleks
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Untuk mengurutkan string yang lebih kompleks, Anda dapat menggunakan fungsi pembanding khusus, seperti yang digunakan pada urutan angka.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                let words = ["Banana", "apple", "cherry", "Mango"];<br><br>
+                <span class="pl-4">words.sort(function(a, b) {</span><br>
+                <span class="pl-8">return a.toLowerCase().localeCompare(b.toLowerCase());</span><br>
+                <span class="pl-4">});</span><br>
+                <span class="pl-4">console.log(words); // Output: ["apple", "Banana", "cherry", "Mango"]</span><br>
+            </div>
+        </div>
+
+        <div class="text-5xl py-14 font-bold">
+            Kesimpulan
+            <ul class="list-disc list-inside text-2xl ol font-normal py-5">
+                <li>Metode <strong>sort()</strong> adalah cara yang sangat berguna untuk mengurutkan elemen dalam array.</li>
+                <li>Secara default, <strong>sort()</strong> mengurutkan elemen-elemen sebagai string, yang bisa menghasilkan urutan yang tidak sesuai untuk angka.</li>
+                <li>Dengan memberikan fungsi pembanding, Anda dapat mengurutkan angka dalam urutan numerik atau mengubah cara pengurutan string.</li>
+                <li>Fungsi pembanding memungkinkan pengurutan yang lebih fleksibel sesuai kebutuhan Anda.</li>
+            </ul>
+        </div>
+    </div>
+
+
             <!-- FOOTER -->
             <footer class="bg-side-blue text-white py-20">
                 <div class="container mx-auto text-center">

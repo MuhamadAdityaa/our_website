@@ -40,7 +40,7 @@
 
     <!-- CONTENT -->
 
-    <!-- SIDEBAR FOR MOBILE -->
+ <!-- SIDEBAR FOR MOBILE -->
 <div id="dropdown" class="w-64 h-screen pb-16 bg-side-blue text-white p-4 overflow-y-auto hidden lg:hidden fixed z-10">
     <h2 class="text-2xl font-semibold mb-8">JS Tutorial</h2>
     <ul class="space-y-2">
@@ -207,70 +207,86 @@
         <!-- MATERI -->
         <div class="overflow-y-auto w-screen">
             <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
+                <!-- MATERI KALIAN DISINI YAAAAA!!!!!! -->
                 <div class="text-5xl font-bold">
-                    JavaScript Scope
+                    JavaScript Arrays
                     <p class="text-xl py-5 font-normal">
-                        Scope adalah ruang lingkup di mana variabel didefinisikan dan dapat diakses. Dalam JavaScript, scope menentukan visibilitas atau aksesibilitas variabel.
+                        JavaScript arrays digunakan untuk menyimpan beberapa nilai dalam satu variabel. Array bisa berisi berbagai tipe data seperti string, number, objek, bahkan array lainnya.
                     </p>
                 </div>
-
+            
                 <div class="text-5xl pt-14 font-bold">
-                    Jenis-Jenis Scope di JavaScript
-                    <ul class="list-decimal list-inside text-2xl ol font-semibold py-5 ">
-                        <li>
-                            Global Scope
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan di luar fungsi memiliki global scope.</li>
-                                <li>Dapat diakses dari mana saja, baik di dalam fungsi maupun di luar fungsi.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                                let globalVar = "I am global";<br><br>
-                            
-                                function example() {<br>
-                                <span class="pl-4">console.log(globalVar); // Output: I am global</span><br>
-                                }
-                            </div>
-                        </li>
-                        <li>
-                            Local Scope (Function Scope)
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan di dalam fungsi hanya bisa diakses di dalam fungsi tersebut.</li>
-                                <li>Tidak bisa diakses dari luar fungsi.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                                function example() {<br>
-                                    <span class="pl-4">let localVar = "I am local";</span><br>
-                                    <span class="pl-4">console.log(localVar); // Output: I am local</span><br>
-                                }<br><br>
-                                
-                                console.log(localVar); // Error: localVar is not defined
-                            </div>
-                        </li>
-                        <li>
-                            Block Scope (diperkenalkan dengan let dan const)
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan dengan let atau const di dalam blok {} hanya bisa diakses di dalam blok tersebut.</li>
-                                <li>Tidak berlaku untuk var, yang bersifat function-scoped atau global-scoped.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl mt-5">
-                                function example() {<br>
-                                    <span class="pl-4">let localVar = "I am local";</span><br>
-                                    <span class="pl-4">console.log(localVar); // Output: I am local</span><br>
-                                }<br><br>
-                                
-                                console.log(localVar); // Error: localVar is not defined
-                            </div>
-                        </li>
+                    Pengertian dan Cara Membuat Array
+                    <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                        <li>Array adalah objek yang digunakan untuk menyimpan beberapa data dalam satu variabel.</li>
+                        <li>Array dapat diakses melalui indeks, dimulai dari 0.</li>
                     </ul>
+                    <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                        let fruits = ["Apple", "Banana", "Cherry"];<br><br>
+                        <span class="pl-4">console.log(fruits[0]); // Output: Apple</span><br>
+                        <span class="pl-4">console.log(fruits[1]); // Output: Banana</span><br>
+                        <span class="pl-4">console.log(fruits[2]); // Output: Cherry</span><br>
+                    </div>
                 </div>
-
+            
+                <div class="text-5xl pt-14 font-bold">
+                    Array Methods
+                    <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                        <li><strong>push()</strong>: Menambahkan elemen ke akhir array.</li>
+                        <li><strong>pop()</strong>: Menghapus elemen terakhir dalam array.</li>
+                        <li><strong>shift()</strong>: Menghapus elemen pertama dalam array.</li>
+                        <li><strong>unshift()</strong>: Menambahkan elemen ke awal array.</li>
+                        <li><strong>splice()</strong>: Menambahkan atau menghapus elemen di posisi tertentu.</li>
+                        <li><strong>forEach()</strong>: Menjalankan fungsi untuk setiap elemen dalam array.</li>
+                    </ul>
+                    <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                        let fruits = ["Apple", "Banana", "Cherry"];<br><br>
+                        <span class="pl-4">fruits.push("Orange"); // Menambah "Orange" di akhir array</span><br>
+                        <span class="pl-4">console.log(fruits); // Output: ["Apple", "Banana", "Cherry", "Orange"]</span><br><br>
+            
+                        <span class="pl-4">fruits.pop(); // Menghapus "Orange" dari array</span><br>
+                        <span class="pl-4">console.log(fruits); // Output: ["Apple", "Banana", "Cherry"]</span><br><br>
+            
+                        <span class="pl-4">fruits.shift(); // Menghapus "Apple"</span><br>
+                        <span class="pl-4">console.log(fruits); // Output: ["Banana", "Cherry"]</span><br><br>
+            
+                        <span class="pl-4">fruits.unshift("Mango"); // Menambah "Mango" di awal array</span><br>
+                        <span class="pl-4">console.log(fruits); // Output: ["Mango", "Banana", "Cherry"]</span><br><br>
+            
+                        <span class="pl-4">fruits.splice(1, 1, "Pineapple"); // Mengganti "Banana" dengan "Pineapple"</span><br>
+                        <span class="pl-4">console.log(fruits); // Output: ["Mango", "Pineapple", "Cherry"]</span><br>
+                    </div>
+                </div>
+            
+                <div class="text-5xl pt-14 font-bold">
+                    Looping Through Arrays
+                    <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                        <li>Anda bisa menggunakan metode seperti <strong>for</strong>, <strong>forEach()</strong>, dan <strong>map()</strong> untuk mengiterasi array.</li>
+                    </ul>
+                    <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                        let fruits = ["Apple", "Banana", "Cherry"];<br><br>
+                        <span class="pl-4">for (let i = 0; i < fruits.length; i++) {</span><br>
+                        <span class="pl-8">console.log(fruits[i]); // Output: Apple, Banana, Cherry</span><br>
+                        <span class="pl-4">}</span><br><br>
+            
+                        <span class="pl-4">fruits.forEach(function(fruit) {</span><br>
+                        <span class="pl-8">console.log(fruit); // Output: Apple, Banana, Cherry</span><br>
+                        <span class="pl-4">});</span><br><br>
+            
+                        <span class="pl-4">let upperFruits = fruits.map(function(fruit) {</span><br>
+                        <span class="pl-8">return fruit.toUpperCase();</span><br>
+                        <span class="pl-4">});</span><br>
+                        <span class="pl-4">console.log(upperFruits); // Output: ["APPLE", "BANANA", "CHERRY"]</span><br>
+                    </div>
+                </div>
+            
                 <div class="text-5xl py-14 font-bold">
                     Kesimpulan
-                    <ul class="list-disc list-inside text-2xl ol font-normal py-5 ">
-                        <li>Global Scope: Untuk variabel yang digunakan secara global.</li>
-                        <li>Local/Function Scope: Untuk variabel di dalam fungsi.</li>
-                        <li>Block Scope: Untuk variabel let dan const di dalam {}.</li>
-                        <li>Gunakan let atau const untuk mencegah kesalahan yang terkait dengan hoisting dan scope leakage.</li>
+                    <ul class="list-disc list-inside text-2xl ol font-normal py-5">
+                        <li>Array memungkinkan Anda menyimpan berbagai nilai dalam satu variabel.</li>
+                        <li>Anda dapat menggunakan berbagai metode array untuk mengelola dan memanipulasi data dalam array.</li>
+                        <li>Array di JavaScript bersifat dinamis, yang berarti dapat menyimpan nilai dari berbagai tipe data.</li>
+                        <li>Penggunaan loop seperti for dan forEach memungkinkan Anda untuk mengiterasi elemen-elemen dalam array.</li>
                     </ul>
                 </div>
             </div>

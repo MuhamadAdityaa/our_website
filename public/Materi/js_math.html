@@ -205,75 +205,91 @@
     <!-- SIDE BAR END -->
      
         <!-- MATERI -->
-        <div class="overflow-y-auto w-screen">
-            <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
-                <div class="text-5xl font-bold">
-                    JavaScript Scope
-                    <p class="text-xl py-5 font-normal">
-                        Scope adalah ruang lingkup di mana variabel didefinisikan dan dapat diakses. Dalam JavaScript, scope menentukan visibilitas atau aksesibilitas variabel.
-                    </p>
-                </div>
+<div class="overflow-y-auto w-screen">
+    <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
+        <!-- MATERI KALIAN DISINI YAAAAA!!!!!! -->
+        <div class="text-5xl font-bold">
+            JavaScript Math
+            <p class="text-xl py-5 font-normal">
+                JavaScript memiliki objek bawaan <strong>Math</strong> yang menyediakan fungsi dan konstanta matematika. Objek ini digunakan untuk melakukan berbagai perhitungan matematika seperti pembulatan, akar kuadrat, trigonometri, dan lainnya.
+            </p>
+        </div>
 
-                <div class="text-5xl pt-14 font-bold">
-                    Jenis-Jenis Scope di JavaScript
-                    <ul class="list-decimal list-inside text-2xl ol font-semibold py-5 ">
-                        <li>
-                            Global Scope
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan di luar fungsi memiliki global scope.</li>
-                                <li>Dapat diakses dari mana saja, baik di dalam fungsi maupun di luar fungsi.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                                let globalVar = "I am global";<br><br>
-                            
-                                function example() {<br>
-                                <span class="pl-4">console.log(globalVar); // Output: I am global</span><br>
-                                }
-                            </div>
-                        </li>
-                        <li>
-                            Local Scope (Function Scope)
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan di dalam fungsi hanya bisa diakses di dalam fungsi tersebut.</li>
-                                <li>Tidak bisa diakses dari luar fungsi.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                                function example() {<br>
-                                    <span class="pl-4">let localVar = "I am local";</span><br>
-                                    <span class="pl-4">console.log(localVar); // Output: I am local</span><br>
-                                }<br><br>
-                                
-                                console.log(localVar); // Error: localVar is not defined
-                            </div>
-                        </li>
-                        <li>
-                            Block Scope (diperkenalkan dengan let dan const)
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan dengan let atau const di dalam blok {} hanya bisa diakses di dalam blok tersebut.</li>
-                                <li>Tidak berlaku untuk var, yang bersifat function-scoped atau global-scoped.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl mt-5">
-                                function example() {<br>
-                                    <span class="pl-4">let localVar = "I am local";</span><br>
-                                    <span class="pl-4">console.log(localVar); // Output: I am local</span><br>
-                                }<br><br>
-                                
-                                console.log(localVar); // Error: localVar is not defined
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="text-5xl py-14 font-bold">
-                    Kesimpulan
-                    <ul class="list-disc list-inside text-2xl ol font-normal py-5 ">
-                        <li>Global Scope: Untuk variabel yang digunakan secara global.</li>
-                        <li>Local/Function Scope: Untuk variabel di dalam fungsi.</li>
-                        <li>Block Scope: Untuk variabel let dan const di dalam {}.</li>
-                        <li>Gunakan let atau const untuk mencegah kesalahan yang terkait dengan hoisting dan scope leakage.</li>
-                    </ul>
-                </div>
+        <div class="text-5xl pt-14 font-bold">
+            Properti dan Konstanta Math
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li><strong>Math.PI</strong>: Nilai π (3.141592653589793).</li>
+                <li><strong>Math.E</strong>: Nilai konstanta Euler (2.718...).</li>
+                <li><strong>Math.LN2</strong>: Logaritma natural dari 2.</li>
+                <li><strong>Math.LN10</strong>: Logaritma natural dari 10.</li>
+                <li><strong>Math.SQRT2</strong>: Akar kuadrat dari 2.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                console.log(Math.PI); // Output: 3.141592653589793<br>
+                console.log(Math.E);  // Output: 2.718281828459045<br>
+                console.log(Math.LN2); // Output: 0.6931471805599453<br>
             </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Metode Pembulatan Math
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li><strong>Math.round()</strong>: Membulatkan angka ke bilangan bulat terdekat.</li>
+                <li><strong>Math.ceil()</strong>: Membulatkan angka ke atas (ke bilangan bulat lebih tinggi).</li>
+                <li><strong>Math.floor()</strong>: Membulatkan angka ke bawah (ke bilangan bulat lebih rendah).</li>
+                <li><strong>Math.trunc()</strong>: Menghapus bagian desimal dari angka.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                console.log(Math.round(4.7));  // Output: 5<br>
+                console.log(Math.ceil(4.1));   // Output: 5<br>
+                console.log(Math.floor(4.9));  // Output: 4<br>
+                console.log(Math.trunc(4.7));  // Output: 4<br>
+            </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Metode Perhitungan Math
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li><strong>Math.sqrt()</strong>: Menghitung akar kuadrat.</li>
+                <li><strong>Math.pow(base, exponent)</strong>: Menghitung pangkat.</li>
+                <li><strong>Math.abs()</strong>: Mengembalikan nilai absolut.</li>
+                <li><strong>Math.max()</strong>: Mengembalikan nilai maksimum dari beberapa angka.</li>
+                <li><strong>Math.min()</strong>: Mengembalikan nilai minimum dari beberapa angka.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                console.log(Math.sqrt(16));    // Output: 4<br>
+                console.log(Math.pow(2, 3));   // Output: 8<br>
+                console.log(Math.abs(-7.25));  // Output: 7.25<br>
+                console.log(Math.max(10, 20, 30)); // Output: 30<br>
+                console.log(Math.min(10, 20, 30)); // Output: 10<br>
+            </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Metode Random Math
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li><strong>Math.random()</strong>: Menghasilkan angka acak antara 0 (inklusif) dan 1 (eksklusif).</li>
+                <li>Mengalikan hasil random untuk menghasilkan angka acak dalam rentang tertentu.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                console.log(Math.random()); // Output: Angka acak antara 0 dan 1<br><br>
+                // Mendapatkan angka acak antara 1 dan 10:<br>
+                console.log(Math.floor(Math.random() * 10) + 1); // Output: 1-10<br>
+            </div>
+        </div>
+
+        <div class="text-5xl py-14 font-bold">
+            Kesimpulan
+            <ul class="list-disc list-inside text-2xl ol font-normal py-5">
+                <li>Objek Math menyediakan berbagai metode dan properti untuk operasi matematika.</li>
+                <li>Anda dapat menggunakan Math untuk pembulatan, perhitungan, dan menghasilkan angka acak.</li>
+                <li>Properti seperti Math.PI, Math.E, dan lainnya berguna untuk perhitungan ilmiah.</li>
+                <li>Metode seperti Math.max() dan Math.min() membantu mencari nilai maksimum atau minimum dalam sekumpulan angka.</li>
+            </ul>
+        </div>
+    </div>
+
+
             <!-- FOOTER -->
             <footer class="bg-side-blue text-white py-20">
                 <div class="container mx-auto text-center">

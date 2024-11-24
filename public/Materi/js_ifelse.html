@@ -204,76 +204,98 @@
     </div>
     <!-- SIDE BAR END -->
      
-        <!-- MATERI -->
-        <div class="overflow-y-auto w-screen">
-            <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
-                <div class="text-5xl font-bold">
-                    JavaScript Scope
-                    <p class="text-xl py-5 font-normal">
-                        Scope adalah ruang lingkup di mana variabel didefinisikan dan dapat diakses. Dalam JavaScript, scope menentukan visibilitas atau aksesibilitas variabel.
-                    </p>
-                </div>
+       <!-- MATERI -->
+<div class="overflow-y-auto w-screen">
+    <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
+        <!-- MATERI KALIAN DISINI YAAAAA!!!!!! -->
+        <div class="text-5xl font-bold">
+            JavaScript If Else
+            <p class="text-xl py-5 font-normal">
+                Pernyataan <strong>if...else</strong> digunakan untuk menjalankan kode berdasarkan kondisi tertentu. Ini adalah salah satu struktur kontrol yang paling umum dalam JavaScript.
+            </p>
+        </div>
 
-                <div class="text-5xl pt-14 font-bold">
-                    Jenis-Jenis Scope di JavaScript
-                    <ul class="list-decimal list-inside text-2xl ol font-semibold py-5 ">
-                        <li>
-                            Global Scope
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan di luar fungsi memiliki global scope.</li>
-                                <li>Dapat diakses dari mana saja, baik di dalam fungsi maupun di luar fungsi.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                                let globalVar = "I am global";<br><br>
-                            
-                                function example() {<br>
-                                <span class="pl-4">console.log(globalVar); // Output: I am global</span><br>
-                                }
-                            </div>
-                        </li>
-                        <li>
-                            Local Scope (Function Scope)
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan di dalam fungsi hanya bisa diakses di dalam fungsi tersebut.</li>
-                                <li>Tidak bisa diakses dari luar fungsi.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                                function example() {<br>
-                                    <span class="pl-4">let localVar = "I am local";</span><br>
-                                    <span class="pl-4">console.log(localVar); // Output: I am local</span><br>
-                                }<br><br>
-                                
-                                console.log(localVar); // Error: localVar is not defined
-                            </div>
-                        </li>
-                        <li>
-                            Block Scope (diperkenalkan dengan let dan const)
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan dengan let atau const di dalam blok {} hanya bisa diakses di dalam blok tersebut.</li>
-                                <li>Tidak berlaku untuk var, yang bersifat function-scoped atau global-scoped.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl mt-5">
-                                function example() {<br>
-                                    <span class="pl-4">let localVar = "I am local";</span><br>
-                                    <span class="pl-4">console.log(localVar); // Output: I am local</span><br>
-                                }<br><br>
-                                
-                                console.log(localVar); // Error: localVar is not defined
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="text-5xl py-14 font-bold">
-                    Kesimpulan
-                    <ul class="list-disc list-inside text-2xl ol font-normal py-5 ">
-                        <li>Global Scope: Untuk variabel yang digunakan secara global.</li>
-                        <li>Local/Function Scope: Untuk variabel di dalam fungsi.</li>
-                        <li>Block Scope: Untuk variabel let dan const di dalam {}.</li>
-                        <li>Gunakan let atau const untuk mencegah kesalahan yang terkait dengan hoisting dan scope leakage.</li>
-                    </ul>
-                </div>
+        <div class="text-5xl pt-14 font-bold">
+            Struktur If Else
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li><strong>if</strong>: Mengevaluasi kondisi, jika benar, kode di dalam blok dijalankan.</li>
+                <li><strong>else</strong>: Menyediakan alternatif ketika kondisi pada if salah.</li>
+                <li><strong>else if</strong>: Menyediakan kondisi tambahan jika kondisi awal tidak terpenuhi.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                let age = 18;<br><br>
+                if (age >= 18) {<br>
+                <span class="pl-4">console.log("You are an adult.");</span><br>
+                } else {<br>
+                <span class="pl-4">console.log("You are a minor.");</span><br>
+                }
             </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Menggunakan Else If
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Pernyataan <strong>else if</strong> digunakan untuk mengevaluasi beberapa kondisi.</li>
+                <li>Urutan evaluasi dimulai dari atas ke bawah hingga menemukan kondisi yang bernilai true.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                let score = 85;<br><br>
+                if (score >= 90) {<br>
+                <span class="pl-4">console.log("Grade: A");</span><br>
+                } else if (score >= 80) {<br>
+                <span class="pl-4">console.log("Grade: B");</span><br>
+                } else if (score >= 70) {<br>
+                <span class="pl-4">console.log("Grade: C");</span><br>
+                } else {<br>
+                <span class="pl-4">console.log("Grade: F");</span><br>
+                }
+            </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Operator Ternary sebagai Alternatif
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Operator ternary digunakan untuk menulis pernyataan <strong>if...else</strong> dalam satu baris.</li>
+                <li>Format: <code>condition ? value_if_true : value_if_false;</code></li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                let age = 20;<br>
+                let message = (age >= 18) ? "Adult" : "Minor";<br>
+                console.log(message); // Output: Adult
+            </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Nested If Else
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li>Pernyataan <strong>if</strong> dapat di-nest untuk mengevaluasi kondisi lebih kompleks.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                let age = 25;<br><br>
+                if (age >= 18) {<br>
+                <span class="pl-4">if (age >= 21) {</span><br>
+                <span class="pl-8">console.log("You can drink alcohol.");</span><br>
+                <span class="pl-4">} else {</span><br>
+                <span class="pl-8">console.log("You are an adult, but cannot drink alcohol.");</span><br>
+                <span class="pl-4">}</span><br>
+                } else {<br>
+                <span class="pl-4">console.log("You are a minor.");</span><br>
+                }
+            </div>
+        </div>
+
+        <div class="text-5xl py-14 font-bold">
+            Kesimpulan
+            <ul class="list-disc list-inside text-2xl ol font-normal py-5">
+                <li><strong>if...else</strong> adalah struktur kontrol dasar untuk pengambilan keputusan.</li>
+                <li><strong>else if</strong> memungkinkan evaluasi beberapa kondisi.</li>
+                <li>Gunakan operator ternary untuk kondisi sederhana.</li>
+                <li>Untuk kondisi yang lebih kompleks, gunakan nested <strong>if</strong>.</li>
+            </ul>
+        </div>
+    </div>
+
+
             <!-- FOOTER -->
             <footer class="bg-side-blue text-white py-20">
                 <div class="container mx-auto text-center">

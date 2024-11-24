@@ -39,8 +39,7 @@
     <!-- NAVIGATION END -->
 
     <!-- CONTENT -->
-
-    <!-- SIDEBAR FOR MOBILE -->
+<!-- SIDEBAR FOR MOBILE -->
 <div id="dropdown" class="w-64 h-screen pb-16 bg-side-blue text-white p-4 overflow-y-auto hidden lg:hidden fixed z-10">
     <h2 class="text-2xl font-semibold mb-8">JS Tutorial</h2>
     <ul class="space-y-2">
@@ -204,76 +203,72 @@
     </div>
     <!-- SIDE BAR END -->
      
-        <!-- MATERI -->
-        <div class="overflow-y-auto w-screen">
-            <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
-                <div class="text-5xl font-bold">
-                    JavaScript Scope
-                    <p class="text-xl py-5 font-normal">
-                        Scope adalah ruang lingkup di mana variabel didefinisikan dan dapat diakses. Dalam JavaScript, scope menentukan visibilitas atau aksesibilitas variabel.
-                    </p>
-                </div>
+       <!-- MATERI -->
+<div class="overflow-y-auto w-screen">
+    <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
+        <!-- MATERI KALIAN DISINI YAAAAA!!!!!! -->
+        <div class="text-5xl font-bold">
+            JavaScript Date Set Methods
+            <p class="text-xl py-5 font-normal">
+                JavaScript menyediakan berbagai metode untuk mengatur bagian-bagian dari objek <strong>Date</strong>, seperti tahun, bulan, hari, jam, menit, detik, dan milidetik. Metode-metode ini memungkinkan Anda untuk memodifikasi tanggal dan waktu.
+            </p>
+        </div>
 
-                <div class="text-5xl pt-14 font-bold">
-                    Jenis-Jenis Scope di JavaScript
-                    <ul class="list-decimal list-inside text-2xl ol font-semibold py-5 ">
-                        <li>
-                            Global Scope
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan di luar fungsi memiliki global scope.</li>
-                                <li>Dapat diakses dari mana saja, baik di dalam fungsi maupun di luar fungsi.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                                let globalVar = "I am global";<br><br>
-                            
-                                function example() {<br>
-                                <span class="pl-4">console.log(globalVar); // Output: I am global</span><br>
-                                }
-                            </div>
-                        </li>
-                        <li>
-                            Local Scope (Function Scope)
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan di dalam fungsi hanya bisa diakses di dalam fungsi tersebut.</li>
-                                <li>Tidak bisa diakses dari luar fungsi.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                                function example() {<br>
-                                    <span class="pl-4">let localVar = "I am local";</span><br>
-                                    <span class="pl-4">console.log(localVar); // Output: I am local</span><br>
-                                }<br><br>
-                                
-                                console.log(localVar); // Error: localVar is not defined
-                            </div>
-                        </li>
-                        <li>
-                            Block Scope (diperkenalkan dengan let dan const)
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan dengan let atau const di dalam blok {} hanya bisa diakses di dalam blok tersebut.</li>
-                                <li>Tidak berlaku untuk var, yang bersifat function-scoped atau global-scoped.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl mt-5">
-                                function example() {<br>
-                                    <span class="pl-4">let localVar = "I am local";</span><br>
-                                    <span class="pl-4">console.log(localVar); // Output: I am local</span><br>
-                                }<br><br>
-                                
-                                console.log(localVar); // Error: localVar is not defined
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+        <div class="text-5xl pt-14 font-bold">
+            Metode `setFullYear()`, `setMonth()`, dan `setDate()`
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li><strong>setFullYear(year, month, date)</strong>: Mengatur tahun, bulan, dan tanggal pada objek <strong>Date</strong>.</li>
+                <li><strong>setMonth(month, date)</strong>: Mengatur bulan (0-11) dan tanggal pada objek <strong>Date</strong>.</li>
+                <li><strong>setDate(date)</strong>: Mengatur tanggal dalam bulan (1-31) pada objek <strong>Date</strong>.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                const currentDate = new Date();<br><br>
+                <span class="pl-4">currentDate.setFullYear(2025, 11, 25);</span><br>
+                <span class="pl-4">console.log(currentDate); // Output: Sat Dec 25 2025...</span><br><br>
 
-                <div class="text-5xl py-14 font-bold">
-                    Kesimpulan
-                    <ul class="list-disc list-inside text-2xl ol font-normal py-5 ">
-                        <li>Global Scope: Untuk variabel yang digunakan secara global.</li>
-                        <li>Local/Function Scope: Untuk variabel di dalam fungsi.</li>
-                        <li>Block Scope: Untuk variabel let dan const di dalam {}.</li>
-                        <li>Gunakan let atau const untuk mencegah kesalahan yang terkait dengan hoisting dan scope leakage.</li>
-                    </ul>
-                </div>
+                <span class="pl-4">currentDate.setMonth(6, 10);</span><br>
+                <span class="pl-4">console.log(currentDate); // Output: Fri Jul 10 2025...</span><br><br>
+
+                <span class="pl-4">currentDate.setDate(15);</span><br>
+                <span class="pl-4">console.log(currentDate); // Output: Fri Jul 15 2025...</span><br>
             </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Metode `setHours()`, `setMinutes()`, `setSeconds()`, dan `setMilliseconds()`
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li><strong>setHours(hour, minutes, seconds, milliseconds)</strong>: Mengatur jam, menit, detik, dan milidetik pada objek <strong>Date</strong>.</li>
+                <li><strong>setMinutes(minutes, seconds, milliseconds)</strong>: Mengatur menit, detik, dan milidetik pada objek <strong>Date</strong>.</li>
+                <li><strong>setSeconds(seconds, milliseconds)</strong>: Mengatur detik dan milidetik pada objek <strong>Date</strong>.</li>
+                <li><strong>setMilliseconds(milliseconds)</strong>: Mengatur milidetik pada objek <strong>Date</strong>.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                const currentDate = new Date();<br><br>
+                <span class="pl-4">currentDate.setHours(14, 30, 0, 500);</span><br>
+                <span class="pl-4">console.log(currentDate); // Output: [14:30:00.500]</span><br><br>
+
+                <span class="pl-4">currentDate.setMinutes(45, 0, 0);</span><br>
+                <span class="pl-4">console.log(currentDate); // Output: [14:45:00.000]</span><br><br>
+
+                <span class="pl-4">currentDate.setSeconds(50, 500);</span><br>
+                <span class="pl-4">console.log(currentDate); // Output: [14:45:50.500]</span><br><br>
+
+                <span class="pl-4">currentDate.setMilliseconds(250);</span><br>
+                <span class="pl-4">console.log(currentDate); // Output: [14:45:50.250]</span><br>
+            </div>
+        </div>
+
+        <div class="text-5xl py-14 font-bold">
+            Kesimpulan
+            <ul class="list-disc list-inside text-2xl ol font-normal py-5">
+                <li>Metode setFullYear(), setMonth(), dan setDate() memungkinkan Anda untuk mengubah bagian tanggal seperti tahun, bulan, dan tanggal.</li>
+                <li>Metode setHours(), setMinutes(), setSeconds(), dan setMilliseconds() memungkinkan Anda untuk mengubah waktu, mulai dari jam hingga milidetik.</li>
+                <li>Dengan metode set, Anda dapat mengubah nilai dari objek Date sesuai kebutuhan.</li>
+            </ul>
+        </div>
+    </div>
+
+
             <!-- FOOTER -->
             <footer class="bg-side-blue text-white py-20">
                 <div class="container mx-auto text-center">

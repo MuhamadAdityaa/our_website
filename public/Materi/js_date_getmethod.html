@@ -204,76 +204,83 @@
     </div>
     <!-- SIDE BAR END -->
      
-        <!-- MATERI -->
-        <div class="overflow-y-auto w-screen">
-            <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
-                <div class="text-5xl font-bold">
-                    JavaScript Scope
-                    <p class="text-xl py-5 font-normal">
-                        Scope adalah ruang lingkup di mana variabel didefinisikan dan dapat diakses. Dalam JavaScript, scope menentukan visibilitas atau aksesibilitas variabel.
-                    </p>
-                </div>
+    <!-- MATERI -->
+<div class="overflow-y-auto w-screen">
+    <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
+        <!-- MATERI KALIAN DISINI YAAAAA!!!!!! -->
+        <div class="text-5xl font-bold">
+            JavaScript Date Get Methods
+            <p class="text-xl py-5 font-normal">
+                JavaScript menyediakan berbagai metode untuk mengambil bagian-bagian dari objek <strong>Date</strong>, seperti tahun, bulan, hari, jam, menit, detik, dan milidetik. Metode-metode ini memungkinkan Anda untuk bekerja dengan tanggal dan waktu secara lebih terperinci.
+            </p>
+        </div>
 
-                <div class="text-5xl pt-14 font-bold">
-                    Jenis-Jenis Scope di JavaScript
-                    <ul class="list-decimal list-inside text-2xl ol font-semibold py-5 ">
-                        <li>
-                            Global Scope
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan di luar fungsi memiliki global scope.</li>
-                                <li>Dapat diakses dari mana saja, baik di dalam fungsi maupun di luar fungsi.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                                let globalVar = "I am global";<br><br>
-                            
-                                function example() {<br>
-                                <span class="pl-4">console.log(globalVar); // Output: I am global</span><br>
-                                }
-                            </div>
-                        </li>
-                        <li>
-                            Local Scope (Function Scope)
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan di dalam fungsi hanya bisa diakses di dalam fungsi tersebut.</li>
-                                <li>Tidak bisa diakses dari luar fungsi.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                                function example() {<br>
-                                    <span class="pl-4">let localVar = "I am local";</span><br>
-                                    <span class="pl-4">console.log(localVar); // Output: I am local</span><br>
-                                }<br><br>
-                                
-                                console.log(localVar); // Error: localVar is not defined
-                            </div>
-                        </li>
-                        <li>
-                            Block Scope (diperkenalkan dengan let dan const)
-                            <ul class="list-inside list-disc text-xl font-normal">
-                                <li>Variabel yang dideklarasikan dengan let atau const di dalam blok {} hanya bisa diakses di dalam blok tersebut.</li>
-                                <li>Tidak berlaku untuk var, yang bersifat function-scoped atau global-scoped.</li>
-                            </ul>
-                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl mt-5">
-                                function example() {<br>
-                                    <span class="pl-4">let localVar = "I am local";</span><br>
-                                    <span class="pl-4">console.log(localVar); // Output: I am local</span><br>
-                                }<br><br>
-                                
-                                console.log(localVar); // Error: localVar is not defined
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="text-5xl py-14 font-bold">
-                    Kesimpulan
-                    <ul class="list-disc list-inside text-2xl ol font-normal py-5 ">
-                        <li>Global Scope: Untuk variabel yang digunakan secara global.</li>
-                        <li>Local/Function Scope: Untuk variabel di dalam fungsi.</li>
-                        <li>Block Scope: Untuk variabel let dan const di dalam {}.</li>
-                        <li>Gunakan let atau const untuk mencegah kesalahan yang terkait dengan hoisting dan scope leakage.</li>
-                    </ul>
-                </div>
+        <div class="text-5xl pt-14 font-bold">
+            Metode `getFullYear()`, `getMonth()`, dan `getDate()`
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li><strong>getFullYear()</strong>: Mengambil tahun dalam format 4 digit (misalnya 2024).</li>
+                <li><strong>getMonth()</strong>: Mengambil bulan dalam format 0-11 (dimulai dari 0 untuk Januari, 1 untuk Februari, dan seterusnya).</li>
+                <li><strong>getDate()</strong>: Mengambil hari dalam bulan, dengan rentang 1 hingga 31.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                const currentDate = new Date();<br><br>
+                <span class="pl-4">let year = currentDate.getFullYear();</span><br>
+                <span class="pl-4">let month = currentDate.getMonth();</span><br>
+                <span class="pl-4">let day = currentDate.getDate();</span><br><br>
+                <span class="pl-4">console.log(year); // Output: 2024</span><br>
+                <span class="pl-4">console.log(month); // Output: 11 (Desember)</span><br>
+                <span class="pl-4">console.log(day); // Output: 24</span><br>
             </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Metode `getDay()`, `getHours()`, `getMinutes()`, `getSeconds()`, dan `getMilliseconds()`
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li><strong>getDay()</strong>: Mengambil hari dalam minggu dengan rentang 0-6 (0 untuk Minggu, 1 untuk Senin, dan seterusnya).</li>
+                <li><strong>getHours()</strong>: Mengambil jam dalam format 24 jam (rentang 0-23).</li>
+                <li><strong>getMinutes()</strong>: Mengambil menit dalam format 0-59.</li>
+                <li><strong>getSeconds()</strong>: Mengambil detik dalam format 0-59.</li>
+                <li><strong>getMilliseconds()</strong>: Mengambil milidetik dalam format 0-999.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                const currentDate = new Date();<br><br>
+                <span class="pl-4">let dayOfWeek = currentDate.getDay();</span><br>
+                <span class="pl-4">let hours = currentDate.getHours();</span><br>
+                <span class="pl-4">let minutes = currentDate.getMinutes();</span><br>
+                <span class="pl-4">let seconds = currentDate.getSeconds();</span><br>
+                <span class="pl-4">let milliseconds = currentDate.getMilliseconds();</span><br><br>
+                <span class="pl-4">console.log(dayOfWeek); // Output: 2 (Selasa)</span><br>
+                <span class="pl-4">console.log(hours); // Output: 10</span><br>
+                <span class="pl-4">console.log(minutes); // Output: 30</span><br>
+                <span class="pl-4">console.log(seconds); // Output: 45</span><br>
+                <span class="pl-4">console.log(milliseconds); // Output: 100</span><br>
+            </div>
+        </div>
+
+        <div class="text-5xl pt-14 font-bold">
+            Menggunakan `getTime()`
+            <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                <li><strong>getTime()</strong>: Mengambil waktu dalam milidetik sejak 1 Januari 1970 (epoch time).</li>
+                <li>Metode ini berguna untuk perhitungan dan perbandingan tanggal, karena mengembalikan nilai angka yang dapat diolah lebih lanjut.</li>
+            </ul>
+            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                const currentDate = new Date();<br><br>
+                <span class="pl-4">let timeInMilliseconds = currentDate.getTime();</span><br><br>
+                <span class="pl-4">console.log(timeInMilliseconds); // Output: 1712304567890 (contoh)</span><br>
+            </div>
+        </div>
+
+        <div class="text-5xl py-14 font-bold">
+            Kesimpulan
+            <ul class="list-disc list-inside text-2xl ol font-normal py-5">
+                <li>Metode getFullYear(), getMonth(), dan getDate() memungkinkan Anda untuk mengambil bagian tanggal yang lebih spesifik seperti tahun, bulan, dan hari dalam bulan.</li>
+                <li>Metode getDay(), getHours(), getMinutes(), getSeconds(), dan getMilliseconds() digunakan untuk mengambil hari dalam minggu, waktu, dan detik, memberikan informasi lebih mendalam tentang waktu.</li>
+                <li>Dengan getTime(), Anda dapat memperoleh waktu dalam milidetik sejak epoch time, yang memungkinkan perbandingan tanggal yang lebih mudah.</li>
+            </ul>
+        </div>
+    </div>
+
+
             <!-- FOOTER -->
             <footer class="bg-side-blue text-white py-20">
                 <div class="container mx-auto text-center">
