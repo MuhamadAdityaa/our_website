@@ -38,8 +38,8 @@
 
     <!-- CONTENT -->
 
-  <!-- SIDEBAR FOR MOBILE -->
-  <div id="dropdown" class="w-64 h-screen bg-side-blue text-white p-4 overflow-y-auto hidden lg:hidden fixed z-10 pb-16">
+ <!-- SIDEBAR FOR MOBILE -->
+ <div id="dropdown" class="w-64 h-screen bg-side-blue text-white p-4 overflow-y-auto hidden lg:hidden fixed z-10 pb-16">
     <h2 class="text-2xl font-semibold mb-8">JS Tutorial</h2>
     <ul class="space-y-2">
         <li><a href="./content.html" class="block p-2 hover:bg-back-blue rounded w-full text-left">JS Introduction</a></li>
@@ -205,89 +205,73 @@
         </ul>
     </div>
     <!-- SIDE BAR END -->
-            <!-- MATERI -->
+        <!-- MATERI -->
         <div class="overflow-y-auto w-screen">
             <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
                 <div class="text-5xl font-bold">
-                    JavaScript Mistakes
+                    JavaScript Loop While
+                    <div class="text-3xl font-medium"><br>
+                        The While Loop
+                    </div>
                     <p class="text-xl py-5 font-normal">
-                        Ada beberapa kesalahan umum yang sering dilakukan dalam JavaScript yang dapat menyebabkan bug atau masalah dalam kode.
+                        Loop while digunakan untuk menjalankan sebuah blok kode berulang kali selama kondisi tertentu bernilai true. Loop ini sangat berguna ketika jumlah iterasi tidak diketahui sebelumnya, dan tergantung pada kondisi yang terus berubah.
                     </p>
                 </div>
-
-                <ul class="list-decimal list-inside text-2xl ol font-semibold py-5 ">
-                    <li>
-                        Menggunakan var daripada let atau const
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>var memiliki masalah dengan hoisting dan scope yang bisa menyebabkan bug yang sulit dilacak.</li>
-                            <li>Gunakan let untuk variabel yang dapat berubah dan const untuk yang tidak berubah.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Mengakses Variabel yang Belum Didefinisikan
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Menulis variabel tanpa mendeklarasikannya terlebih dahulu dapat menyebabkan error atau perilaku yang tidak terduga.</li>
-                            <li>Gunakan let atau const untuk deklarasi variabel.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Salah Penggunaan == daripada ===
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>== melakukan perbandingan dengan type coercion (pengubahan tipe otomatis), sedangkan === membandingkan nilai dan tipe data secara ketat.</li>
-                            <li>Selalu gunakan === untuk perbandingan yang lebih aman.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Menggunakan Global Variables
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Variabel global bisa menyebabkan konflik dan kesalahan dalam aplikasi, karena bisa diakses atau dimodifikasi di mana saja.</li>
-                            <li>Batasi penggunaan variabel global dengan modul atau IIFE.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Tidak Menangani Asynchronous Code dengan Benar
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Kesalahan sering terjadi saat bekerja dengan callbacks, Promises, atau async/await jika tidak dikelola dengan baik.</li>
-                            <li>Gunakan Promise dan async/await untuk menghindari masalah callback hell.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Tidak Memeriksa Nilai null atau undefined
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Akses objek atau array tanpa memeriksa apakah mereka null atau undefined dapat menyebabkan error runtime.</li>
-                            <li>Selalu lakukan pengecekan kondisi sebelum akses properti.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Menulis Kode yang Tidak Dapat Dibaca
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Hindari kode yang terlalu kompleks tanpa komentar atau dokumentasi.</li>
-                            <li>Gunakan konvensi penamaan yang konsisten dan jelas.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Salah Memahami Hoisting
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>var di-hoist ke atas fungsi atau global scope, sementara let dan const tidak.</li>
-                            <li>Ini bisa menyebabkan kode yang tampaknya bekerja, tetapi memunculkan kesalahan saat dijalankan.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Menggunakan eval()
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>eval() bisa mengeksekusi kode secara dinamis yang dapat menimbulkan masalah keamanan dan performa.</li>
-                            <li>Hindari penggunaan eval().</li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <div class="text-5xl py-14 font-bold">
-                    Kesimpulan
-                    <ul class="list-inside text-2xl ol font-normal py-5 ">
-                        <li>Beberapa kesalahan umum dalam JavaScript seperti menggunakan var daripada let/const, perbandingan menggunakan == bukan ===, dan kesalahan dalam menangani asynchronous code dapat menyebabkan bug dan masalah lainnya. Selalu gunakan praktik terbaik dan waspada terhadap kesalahan umum ini.</li>
-                    </ul>
+                <div class="text-3xl font-medium">
+                    Syntax
+                    <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                        while (condition) {<br>
+                            <span class="pl-4">// kode yang akan dieksekusi</span><br>
+                        }
+                    </div>
                 </div>
-            </div>
+                <div class="text-3xl font-medium">
+                    Penjelasan
+                    <p class="text-xl py-5 font-normal">                            
+                        condition: Ekspresi yang dievaluasi sebelum setiap iterasi. Jika bernilai true, loop akan terus berjalan.<br>
+                        Loop berhenti jika kondisi berubah menjadi false.
+                    </p>
+                </div>
+                <div class="text-3xl font-medium">
+                    Penggunaan<br><br>
+                    1. Contoh dasar
+                    <p class="text-xl py-5 font-normal">                            
+                        for...in sangat sering digunakan untuk membaca properti dalam sebuah objek.                        
+                    </p>
+                    <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                        let i = 0;<br>
+                        while (i < 5) {<br>
+                        <span class="pl-4"> console.log(i);</span><br>
+                        <span class="pl-4">  i++;</span><br>
+                        }
+                    </div>
+                </div>
+                <div class="text-3xl font-medium">
+                    2.Loop Tak Terbatas (Infinite Loop)
+                    <p class="text-xl py-5 font-normal">                            
+                        Jika kondisi selalu true, loop akan berjalan terus menerus. Hati-hati dengan kondisi ini!
+                    </p>
+                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                            while (true) {<br>
+                            <span class="pl-4"> console.log("This runs forever");</span><br>
+                        }
+                    </div>
+                </div>
+                <div class="text-3xl font-medium">
+                    3.Loop dengan Kondisi Dinamis
+                    <p class="text-xl py-5 font-normal">                            
+                        Gunakan loop untuk membaca input hingga kondisi tertentu tercapai, misalnya menghentikan program saat pengguna memasukkan kata "stop".
+                    </p>
+                </div>
+                <div class="text-3xl font-medium">
+                    Perbedaan while dan for:
+                    <p class="text-xl py-5 font-normal">                            
+                        Gunakan while ketika jumlah iterasi tidak diketahui sebelumnya.<br>
+                        Gunakan for ketika jumlah iterasi sudah jelas atau dapat ditentukan.<br>
+                    </p>
+                </div>
+            </div><br>
+            
             <!-- FOOTER -->
             <footer class="bg-side-blue text-white py-20">
                 <div class="container mx-auto text-center">

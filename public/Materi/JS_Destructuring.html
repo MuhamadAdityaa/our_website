@@ -38,8 +38,8 @@
 
     <!-- CONTENT -->
 
-  <!-- SIDEBAR FOR MOBILE -->
-  <div id="dropdown" class="w-64 h-screen bg-side-blue text-white p-4 overflow-y-auto hidden lg:hidden fixed z-10 pb-16">
+ <!-- SIDEBAR FOR MOBILE -->
+ <div id="dropdown" class="w-64 h-screen bg-side-blue text-white p-4 overflow-y-auto hidden lg:hidden fixed z-10 pb-16">
     <h2 class="text-2xl font-semibold mb-8">JS Tutorial</h2>
     <ul class="space-y-2">
         <li><a href="./content.html" class="block p-2 hover:bg-back-blue rounded w-full text-left">JS Introduction</a></li>
@@ -205,89 +205,77 @@
         </ul>
     </div>
     <!-- SIDE BAR END -->
-            <!-- MATERI -->
+        <!-- MATERI -->
         <div class="overflow-y-auto w-screen">
             <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
                 <div class="text-5xl font-bold">
-                    JavaScript Mistakes
+                    JavaScript Destructuring
                     <p class="text-xl py-5 font-normal">
-                        Ada beberapa kesalahan umum yang sering dilakukan dalam JavaScript yang dapat menyebabkan bug atau masalah dalam kode.
+                        Destructuring adalah fitur dalam JavaScript yang memungkinkan Anda mengekstrak nilai dari array atau properti dari objek dan menetapkannya ke variabel dengan cara yang lebih singkat dan elegan.
                     </p>
                 </div>
-
-                <ul class="list-decimal list-inside text-2xl ol font-semibold py-5 ">
-                    <li>
-                        Menggunakan var daripada let atau const
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>var memiliki masalah dengan hoisting dan scope yang bisa menyebabkan bug yang sulit dilacak.</li>
-                            <li>Gunakan let untuk variabel yang dapat berubah dan const untuk yang tidak berubah.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Mengakses Variabel yang Belum Didefinisikan
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Menulis variabel tanpa mendeklarasikannya terlebih dahulu dapat menyebabkan error atau perilaku yang tidak terduga.</li>
-                            <li>Gunakan let atau const untuk deklarasi variabel.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Salah Penggunaan == daripada ===
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>== melakukan perbandingan dengan type coercion (pengubahan tipe otomatis), sedangkan === membandingkan nilai dan tipe data secara ketat.</li>
-                            <li>Selalu gunakan === untuk perbandingan yang lebih aman.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Menggunakan Global Variables
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Variabel global bisa menyebabkan konflik dan kesalahan dalam aplikasi, karena bisa diakses atau dimodifikasi di mana saja.</li>
-                            <li>Batasi penggunaan variabel global dengan modul atau IIFE.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Tidak Menangani Asynchronous Code dengan Benar
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Kesalahan sering terjadi saat bekerja dengan callbacks, Promises, atau async/await jika tidak dikelola dengan baik.</li>
-                            <li>Gunakan Promise dan async/await untuk menghindari masalah callback hell.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Tidak Memeriksa Nilai null atau undefined
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Akses objek atau array tanpa memeriksa apakah mereka null atau undefined dapat menyebabkan error runtime.</li>
-                            <li>Selalu lakukan pengecekan kondisi sebelum akses properti.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Menulis Kode yang Tidak Dapat Dibaca
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Hindari kode yang terlalu kompleks tanpa komentar atau dokumentasi.</li>
-                            <li>Gunakan konvensi penamaan yang konsisten dan jelas.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Salah Memahami Hoisting
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>var di-hoist ke atas fungsi atau global scope, sementara let dan const tidak.</li>
-                            <li>Ini bisa menyebabkan kode yang tampaknya bekerja, tetapi memunculkan kesalahan saat dijalankan.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Menggunakan eval()
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>eval() bisa mengeksekusi kode secara dinamis yang dapat menimbulkan masalah keamanan dan performa.</li>
-                            <li>Hindari penggunaan eval().</li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <div class="text-5xl py-14 font-bold">
-                    Kesimpulan
-                    <ul class="list-inside text-2xl ol font-normal py-5 ">
-                        <li>Beberapa kesalahan umum dalam JavaScript seperti menggunakan var daripada let/const, perbandingan menggunakan == bukan ===, dan kesalahan dalam menangani asynchronous code dapat menyebabkan bug dan masalah lainnya. Selalu gunakan praktik terbaik dan waspada terhadap kesalahan umum ini.</li>
-                    </ul>
+                <div class="text-3xl font-medium">
+                    1. Destructuring Array
+                    <p class="text-xl py-5 font-normal">                            
+                        Mudah mengambil nilai dari sebuah array dan menetapkannya ke variabel:                    
+                    </p>
+                    <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                        const fruits = ["apple", "banana", "cherry"];<br>
+                        const [a, b, c] = fruits;<br><br>
+                        console.log(a);<br>
+                        console.log(b);
+                    </div>
+                </div>
+                <div class="text-3xl pl-10 font-medium">
+                    - Default Values: Memberikan nilai default jika elemen tidak ada.<br>
+                    <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                       const [x, y, z = "default"] = ["apple", "banana"];<br>
+                       console.log(z);
+                    </div>
+                </div>
+                <div class="text-3xl pl-10 font-medium">
+                    - Skip Values: Melewati nilai dengan menggunakan tanda koma.<br>
+                    <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                        const [, secondFruit] = fruits;<br>
+                        console.log(secondFruit);
+                    </div>
+                </div>
+                <div class="text-3xl font-medium">
+                    2. Destructuring Object
+                    <p class="text-xl py-5 font-normal">                            
+                        Ekstraksi properti objek ke dalam variabel:                    
+                    </p>
+                    <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                        const person = { name: "John", age: 30 };<br>
+                        const { name, age } = person;<br><br>
+                        console.log(name);<br>
+                        console.log(age);
+                    </div>
+                </div>
+                <div class="text-3xl pl-10 font-medium">
+                    - Custom Variable Names: Menetapkan properti ke variabel dengan nama berbeda.<br>
+                    <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                        const { name: fullName } = person;<br>
+                        console.log(fullName);
+                    </div>
+                </div>
+                <div class="text-3xl pl-10 font-medium">
+                    - Default Values: Menetapkan nilai default jika properti tidak ada.<br>
+                    <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                        const { hobby = "reading" } = person;<br>
+                        console.log(hobby);
+                    </div>
+                </div>
+                <div class="text-3xl font-medium">
+                    Keuntungan Destructuring
+                    <p class="text-xl py-5 font-normal">
+                        Kode Lebih Bersih dan Singkat: Tidak perlu menulis kode panjang untuk mengakses properti atau elemen.<br>
+                        Mengurangi Redundansi: Tidak perlu mengulang nama variabel atau properti berkali-kali.<br>
+                        Mudah Digunakan untuk Fungsi: Menjadikan parameter lebih fleksibel dan terstruktur.
+                    </p>
                 </div>
             </div>
+            
             <!-- FOOTER -->
             <footer class="bg-side-blue text-white py-20">
                 <div class="container mx-auto text-center">

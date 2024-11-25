@@ -11,28 +11,30 @@
     <!-- NAVIGATION -->
     <div class="bg-white text-black drop-shadow-lg sticky w-full top-0">
         <div class="flex items-center justify-between px-4 py-1 mx-4 sm:px-8 sm:mx-8 md:px-12 md:mx-12 lg:px-16 lg:mx-16 md:py-2">
-            <div class="flex space-x-2 items-center">
-                <!-- BURGER MENU -->
-                <div class="lg:hidden">
-                    <button id="burger-button" class="text-gray-800 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-                <!-- BURGER MENU END -->
-                <!-- IKON -->
-                <button class="p-2 rounded">
-                    <img src="../photo/Logo.png" alt="logo" class="h-10 w-10">
+          <div class="flex space-x-2 items-center">
+            <!-- BURGER MENU -->
+            <div class="lg:hidden">
+                <button id="burger-button" class="text-gray-800 focus:outline-none">
+                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                     </svg>
                 </button>
-                <!-- IKON END -->
             </div>
-            <!-- Teks bagian kanan -->
-            <div class="flex space-x-4 justify-center items-center">
-                <a href="../index.html" class="aktif py-2 px-2 md:py-4 md:px-4 rounded hover:bg-back-blue hover:text-white">Beranda</a>
-                <a href="./content.html" class="aktif py-2 px-2 md:py-4 md:px-4 rounded hover:bg-back-blue hover:text-white bg-back-blue text-white">Materi</a>
-            </div>
+            <!-- BURGER MENU END -->
+            <!-- IKON -->
+            <button class="p-2 rounded">
+                <img src="../photo/Logo.png" alt="logo" class="h-10 w-10">
+            </button>
+            <!-- IKON END -->
+          </div>
+          <!-- Teks bagian kanan -->
+          <div class="flex space-x-4 justify-center items-center">
+            <a href="../index.html" class="aktif py-2 px-2 md:py-4 md:px-4 rounded hover:bg-back-blue hover:text-white">Beranda</a>
+            <a href="./content.html" class="aktif py-2 px-2 md:py-4 md:px-4 rounded hover:bg-back-blue hover:text-white bg-back-blue text-white">Materi</a>
+          </div>
         </div>
+
+
     </div>
     <!-- NAVIGATION END -->
 
@@ -127,7 +129,7 @@
     <div class="w-64 h-full bg-side-blue text-white p-4 overflow-y-auto hidden lg:block ">
         <h2 class="text-2xl font-semibold mb-4">JS Tutorial</h2>
         <ul class="space-y-2">
-            <li><a href="./content.html" class="block p-2 hover:bg-back-blue rounded w-full text-left">JS Introduction</a></li>
+        <li><a href="./content.html" class="block p-2 hover:bg-back-blue rounded w-full text-left">JS Introduction</a></li>
         <li><a href="./JS_where_to.html" class="block p-2 hover:bg-back-blue rounded w-full text-left">JS Where To</a></li>
         <li><a href="./JS_output.html" class="block p-2 hover:bg-back-blue rounded w-full text-left">JS Output</a></li>
         <li><a href="./JS_statement.html" class="block p-2 hover:bg-back-blue rounded w-full text-left">JS Statements</a></li>
@@ -205,87 +207,43 @@
         </ul>
     </div>
     <!-- SIDE BAR END -->
-            <!-- MATERI -->
+     
+        <!-- MATERI -->
         <div class="overflow-y-auto w-screen">
             <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
                 <div class="text-5xl font-bold">
-                    JavaScript Mistakes
+                    JavaScript Switch
                     <p class="text-xl py-5 font-normal">
-                        Ada beberapa kesalahan umum yang sering dilakukan dalam JavaScript yang dapat menyebabkan bug atau masalah dalam kode.
+                        Pernyataan switch dalam JavaScript digunakan untuk memilih salah satu dari beberapa blok kode untuk dieksekusi. Cara kerjanya mirip dengan beberapa pernyataan if...else, tetapi lebih terstruktur dan mudah dibaca untuk kondisi yang memiliki banyak cabang.
                     </p>
                 </div>
-
-                <ul class="list-decimal list-inside text-2xl ol font-semibold py-5 ">
-                    <li>
-                        Menggunakan var daripada let atau const
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>var memiliki masalah dengan hoisting dan scope yang bisa menyebabkan bug yang sulit dilacak.</li>
-                            <li>Gunakan let untuk variabel yang dapat berubah dan const untuk yang tidak berubah.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Mengakses Variabel yang Belum Didefinisikan
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Menulis variabel tanpa mendeklarasikannya terlebih dahulu dapat menyebabkan error atau perilaku yang tidak terduga.</li>
-                            <li>Gunakan let atau const untuk deklarasi variabel.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Salah Penggunaan == daripada ===
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>== melakukan perbandingan dengan type coercion (pengubahan tipe otomatis), sedangkan === membandingkan nilai dan tipe data secara ketat.</li>
-                            <li>Selalu gunakan === untuk perbandingan yang lebih aman.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Menggunakan Global Variables
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Variabel global bisa menyebabkan konflik dan kesalahan dalam aplikasi, karena bisa diakses atau dimodifikasi di mana saja.</li>
-                            <li>Batasi penggunaan variabel global dengan modul atau IIFE.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Tidak Menangani Asynchronous Code dengan Benar
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Kesalahan sering terjadi saat bekerja dengan callbacks, Promises, atau async/await jika tidak dikelola dengan baik.</li>
-                            <li>Gunakan Promise dan async/await untuk menghindari masalah callback hell.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Tidak Memeriksa Nilai null atau undefined
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Akses objek atau array tanpa memeriksa apakah mereka null atau undefined dapat menyebabkan error runtime.</li>
-                            <li>Selalu lakukan pengecekan kondisi sebelum akses properti.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Menulis Kode yang Tidak Dapat Dibaca
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Hindari kode yang terlalu kompleks tanpa komentar atau dokumentasi.</li>
-                            <li>Gunakan konvensi penamaan yang konsisten dan jelas.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Salah Memahami Hoisting
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>var di-hoist ke atas fungsi atau global scope, sementara let dan const tidak.</li>
-                            <li>Ini bisa menyebabkan kode yang tampaknya bekerja, tetapi memunculkan kesalahan saat dijalankan.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Menggunakan eval()
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>eval() bisa mengeksekusi kode secara dinamis yang dapat menimbulkan masalah keamanan dan performa.</li>
-                            <li>Hindari penggunaan eval().</li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <div class="text-5xl py-14 font-bold">
-                    Kesimpulan
-                    <ul class="list-inside text-2xl ol font-normal py-5 ">
-                        <li>Beberapa kesalahan umum dalam JavaScript seperti menggunakan var daripada let/const, perbandingan menggunakan == bukan ===, dan kesalahan dalam menangani asynchronous code dapat menyebabkan bug dan masalah lainnya. Selalu gunakan praktik terbaik dan waspada terhadap kesalahan umum ini.</li>
-                    </ul>
+                <div class="text-3xl font-medium">
+                    Syntax
+                    <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                        switch(expression) {<br>
+                            <span class="pl-4">case value1:</span><br>
+                            <span class="pl-10">break;</span><br>
+                            <span class="pl-4">case value2:</span><br>
+                            <span class="pl-10">break;</span><br>
+                            <span class="pl-4"></span>default:</span><br>
+                        }
+                    </div>
+                </div>
+                <div class="text-3xl font-medium">
+                    Penjelasan
+                    <p class="text-xl py-5 font-normal">                            
+                        Expression: Nilai yang akan dibandingkan dengan setiap case.<br>
+                        Case: Nilai spesifik untuk dibandingkan dengan ekspresi.<br>
+                        Break: Mengakhiri eksekusi dalam blok tertentu. Jika tidak disertakan, eksekusi akan berlanjut ke case berikutnya (fall-through).<br>
+                        Default: Digunakan untuk menangani kondisi jika tidak ada case yang cocok. Ini bersifat opsional.<br>
+                    </p>
+                </div>
+                <div class="text-3xl font-medium">
+                    Catatan
+                    <p class="text-xl py-5 font-normal">
+                        switch memeriksa nilai dengan perbandingan strict equality (===), sehingga tipe data juga diperhatikan.<br>
+                        break penting untuk mencegah eksekusi case berikutnya (fall-through), kecuali Anda sengaja ingin melakukannya.
+                    </p>
                 </div>
             </div>
             <!-- FOOTER -->
@@ -305,11 +263,11 @@
 
 
 
-    </div>
+     </div>
     <!-- CONTENT END -->
 
     <!-- SCRIPT JS -->
-    <script src="../script.js"></script>
+     <script src="../script.js"></script>
     <!-- SCRIPT JS END -->
 
 </body>

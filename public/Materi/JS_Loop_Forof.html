@@ -38,8 +38,8 @@
 
     <!-- CONTENT -->
 
-  <!-- SIDEBAR FOR MOBILE -->
-  <div id="dropdown" class="w-64 h-screen bg-side-blue text-white p-4 overflow-y-auto hidden lg:hidden fixed z-10 pb-16">
+ <!-- SIDEBAR FOR MOBILE -->
+ <div id="dropdown" class="w-64 h-screen bg-side-blue text-white p-4 overflow-y-auto hidden lg:hidden fixed z-10 pb-16">
     <h2 class="text-2xl font-semibold mb-8">JS Tutorial</h2>
     <ul class="space-y-2">
         <li><a href="./content.html" class="block p-2 hover:bg-back-blue rounded w-full text-left">JS Introduction</a></li>
@@ -205,89 +205,94 @@
         </ul>
     </div>
     <!-- SIDE BAR END -->
-            <!-- MATERI -->
+        <!-- MATERI -->
         <div class="overflow-y-auto w-screen">
             <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
                 <div class="text-5xl font-bold">
-                    JavaScript Mistakes
+                    JavaScript For Of
+                    <div class="text-3xl font-medium"><br>
+                        The For Of Loop
+                    </div>
                     <p class="text-xl py-5 font-normal">
-                        Ada beberapa kesalahan umum yang sering dilakukan dalam JavaScript yang dapat menyebabkan bug atau masalah dalam kode.
+                        for...of adalah loop yang digunakan untuk mengiterasi elemen iterable seperti array, string, Map, Set, atau objek yang mendukung iterasi. Loop ini memberikan cara yang lebih bersih dan sederhana untuk mendapatkan nilai elemen daripada menggunakan indeks atau properti.                    
                     </p>
                 </div>
-
-                <ul class="list-decimal list-inside text-2xl ol font-semibold py-5 ">
-                    <li>
-                        Menggunakan var daripada let atau const
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>var memiliki masalah dengan hoisting dan scope yang bisa menyebabkan bug yang sulit dilacak.</li>
-                            <li>Gunakan let untuk variabel yang dapat berubah dan const untuk yang tidak berubah.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Mengakses Variabel yang Belum Didefinisikan
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Menulis variabel tanpa mendeklarasikannya terlebih dahulu dapat menyebabkan error atau perilaku yang tidak terduga.</li>
-                            <li>Gunakan let atau const untuk deklarasi variabel.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Salah Penggunaan == daripada ===
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>== melakukan perbandingan dengan type coercion (pengubahan tipe otomatis), sedangkan === membandingkan nilai dan tipe data secara ketat.</li>
-                            <li>Selalu gunakan === untuk perbandingan yang lebih aman.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Menggunakan Global Variables
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Variabel global bisa menyebabkan konflik dan kesalahan dalam aplikasi, karena bisa diakses atau dimodifikasi di mana saja.</li>
-                            <li>Batasi penggunaan variabel global dengan modul atau IIFE.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Tidak Menangani Asynchronous Code dengan Benar
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Kesalahan sering terjadi saat bekerja dengan callbacks, Promises, atau async/await jika tidak dikelola dengan baik.</li>
-                            <li>Gunakan Promise dan async/await untuk menghindari masalah callback hell.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Tidak Memeriksa Nilai null atau undefined
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Akses objek atau array tanpa memeriksa apakah mereka null atau undefined dapat menyebabkan error runtime.</li>
-                            <li>Selalu lakukan pengecekan kondisi sebelum akses properti.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Menulis Kode yang Tidak Dapat Dibaca
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Hindari kode yang terlalu kompleks tanpa komentar atau dokumentasi.</li>
-                            <li>Gunakan konvensi penamaan yang konsisten dan jelas.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Salah Memahami Hoisting
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>var di-hoist ke atas fungsi atau global scope, sementara let dan const tidak.</li>
-                            <li>Ini bisa menyebabkan kode yang tampaknya bekerja, tetapi memunculkan kesalahan saat dijalankan.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Menggunakan eval()
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>eval() bisa mengeksekusi kode secara dinamis yang dapat menimbulkan masalah keamanan dan performa.</li>
-                            <li>Hindari penggunaan eval().</li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <div class="text-5xl py-14 font-bold">
-                    Kesimpulan
-                    <ul class="list-inside text-2xl ol font-normal py-5 ">
-                        <li>Beberapa kesalahan umum dalam JavaScript seperti menggunakan var daripada let/const, perbandingan menggunakan == bukan ===, dan kesalahan dalam menangani asynchronous code dapat menyebabkan bug dan masalah lainnya. Selalu gunakan praktik terbaik dan waspada terhadap kesalahan umum ini.</li>
-                    </ul>
+                <div class="text-3xl font-medium">
+                    Syntax
+                    <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                        for (variable of iterable) {<br>
+                            <span class="pl-4">// kode yang akan dieksekusi</span><br>
+                        }
+                    </div>
+                </div>
+                <div class="text-3xl font-medium">
+                    Penjelasan
+                    <p class="text-xl py-5 font-normal">                            
+                        variable: Variabel yang menyimpan elemen yang sedang diiterasi.<br>
+                        iterable: Objek iterable, seperti array atau string.
+                    </p>
+                </div>
+                <div class="text-3xl font-medium">
+                    Penggunaan<br><br>
+                    1. Iterasi pada Array
+                    <p class="text-xl py-5 font-normal">                            
+                        for...of sangat berguna untuk membaca nilai elemen dalam array.                  
+                    </p>
+                    <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                        const fruits = ["apple", "banana", "cherry"];<br><br>
+                            <span class="pl-">for (const fruit of fruits) {</span><br>
+                            <span class="pl-4">console.log(fruit);</span><br>
+                        }
+                    </div>
+                </div>
+                <div class="text-3xl font-medium">
+                    2. Iterasi pada String
+                    <p class="text-xl py-5 font-normal">                            
+                        for...of dapat digunakan untuk mengiterasi setiap karakter dalam string.
+                    </p>
+                    <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                        const word = "JavaScript";<br><br>
+                            <span>for (const char of word) {</span><br>
+                            <span class="pl-4">console.log(char);</span><br>
+                        }
+                    </div>
+                </div>
+                <div class="text-3xl font-medium">
+                    3. Iterasi pada Set
+                    <p class="text-xl py-5 font-normal">                            
+                        for...of mengiterasi elemen unik dalam Set.
+                    </p>
+                    <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                        const uniqueNumbers = new Set([1, 2, 3]);<br><br>
+                            <span>for (const num of uniqueNumbers) {</span><br>
+                            <span class="pl-4"> console.log(num);</span><br>
+                        }
+                    </div>
+                </div>
+                <div class="text-3xl font-medium">
+                    3. Iterasi pada Map
+                    <p class="text-xl py-5 font-normal">                            
+                        for...of dapat digunakan untuk mengakses pasangan key-value dari Map.
+                    </p>
+                    <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                        const map = new Map([<br>
+                        <span class="pl-4">["name", "John"],</span><br>
+                        <span class="pl-4"> ["age", 30],</span><br>
+                        ]);<br><br> 
+                        for (const [key, value] of map) {<br>
+                            <span class="pl-4">console.log(key + ": " + value);</span><br>
+                        }
+                    </div>
+                </div>
+                <div class="text-3xl font-medium">
+                    Catatan
+                    <p class="text-xl py-5 font-normal">
+                        Tidak dapat digunakan untuk objek biasa, karena objek bukan iterable. Untuk iterasi pada properti objek, gunakan for...in.<br>
+                        Lebih cocok untuk mengiterasi nilai langsung dibandingkan dengan indeks (berbeda dari for...in).
+                    </p>
                 </div>
             </div>
+            
             <!-- FOOTER -->
             <footer class="bg-side-blue text-white py-20">
                 <div class="container mx-auto text-center">
