@@ -205,114 +205,125 @@
         </ul>
     </div>
     <!-- SIDE BAR END -->
-            <!-- MATERI -->
+        <!-- MATERI -->
         <div class="overflow-y-auto w-screen">
             <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
-                <div class="text-5xl font-bold">
-                    JavaScript Best Practices
-                    <p class="text-xl py-5 font-normal">
-                        Praktik terbaik dalam menulis kode JavaScript bertujuan untuk meningkatkan kualitas, keterbacaan, dan performa kode.
-                    </p>
-                </div>
-
-                <ul class="list-decimal list-inside text-2xl ol font-semibold py-5 ">
-                    <li>
-                        Gunakan const dan let daripada var
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>const untuk nilai yang tidak akan diubah.</li>
-                            <li>let untuk variabel yang bisa diubah.</li>
-                            <li>Hindari penggunaan var karena bisa menimbulkan masalah dengan scoping dan hoisting.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            const maxValue = 100;<br>
-                            let count = 0;
-                        </div>
-                    </li>
-                    <li>
-                        Gunakan Strict Mode
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Selalu gunakan "use strict"; di awal file atau fungsi untuk mengaktifkan mode ketat, yang membantu mencegah kesalahan umum.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Hindari Penggunaan Global Variables
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Usahakan untuk menghindari variabel global karena bisa menyebabkan konflik dan bug yang sulit dideteksi.</li>
-                            <li>Gunakan modularisasi atau IIFE (Immediately Invoked Function Expressions) untuk membatasi ruang lingkup.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Gunakan Arrow Functions untuk Fungsi Sederhana
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Gunakan arrow functions untuk kode yang lebih ringkas, terutama untuk fungsi pendek.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            const add = (a, b) => a + b;
-                        </div>
-                    </li>
-                    <li>
-                        Menulis Fungsi Kecil dan Spesifik
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Buat fungsi yang memiliki satu tujuan dan ukuran yang kecil. Ini akan membuat kode lebih mudah dipahami dan diuji.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            function calculateTotal(price, quantity) {<br>
-                            <span class="pl-4">return price * quantity;</span><br>
-                            }
-                        </div>
-                    </li>
-                    <li>
-                        Konsisten dalam Penamaan
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Gunakan konvensi penamaan yang konsisten (misalnya camelCase untuk variabel dan fungsi).</li>
-                            <li>Hindari penggunaan singkatan yang membingungkan.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Dokumentasi dan Komentar
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Berikan komentar untuk kode yang kompleks atau bagian yang tidak langsung jelas. Hindari komentar berlebihan pada kode yang sudah jelas.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            // Menghitung total harga<br>
-                            let total = calculateTotal(price, quantity);
-                        </div>
-                    </li>
-                    <li>
-                        Optimalkan Penggunaan Loop
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Gunakan forEach(), map(), dan metode array lainnya jika lebih cocok daripada for klasik.</li>
-                            <li>Hindari modifikasi array saat iterasi, gunakan metode yang mengembalikan array baru seperti map().</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Hindari eval()
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Hindari penggunaan eval() karena bisa menyebabkan masalah keamanan dan performa.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Periksa dan Tangani Error
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Gunakan try-catch untuk menangani error dan pastikan aplikasi tidak crash.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            try {<br>
-                            <span class="pl-4">let result = riskyFunction();</span><br>
-                            } catch (error) {<br>
-                            <span class="pl-4">console.error("An error occurred:", error);</span><br>
-                            }
-                        </div>
-                    </li>
-                </ul>
-
-                <div class="text-5xl py-14 font-bold">
-                    Kesimpulan
-                    <ul class="list-inside text-2xl ol font-normal py-5 ">
-                        <li>Mengikuti JavaScript best practices akan membantu menulis kode yang lebih bersih, aman, dan mudah dipelihara. Fokus pada penggunaan const/let, menulis fungsi kecil, dan menghindari praktik buruk seperti penggunaan eval() dan variabel global.</li>
+                <h1 class="text-4xl font-bold mb-8">JavaScript Variable</h1>
+                    <p class="text-xl mb-6">Variabel adalah kontainer untuk menyimpan data. Ada 4 cara untuk mendeklarasikan variabel dalam JavaScript:</p>
+                    <ul class="list-disc pl-6 text-lg mb-6">
+                        <li>Secara otomatis</li>
+                        <li>Menggunakan <code class="text-blue-500">var</code></li>
+                        <li>Menggunakan <code class="text-blue-500">let</code></li>
+                        <li>Menggunakan <code class="text-blue-500">const</code></li>
                     </ul>
-                </div>
-            </div>
+
+                    <div class="mb-10">
+                        <h2 class="text-2xl font-semibold mb-4">Contoh Deklarasi Otomatis</h2>
+                        <p class="mb-4">Variabel dapat dideklarasikan secara otomatis saat pertama kali digunakan:</p>
+                        <div class="bg-back-blue text-white p-4 rounded-lg font-mono text-sm mb-4">
+                            <pre>x = 5; <br>y = 6; <br>z = x + y;</pre>
+                        </div>
+                        <p class="text-sm italic text-gray-600">Catatan: Sebaiknya selalu mendeklarasikan variabel sebelum digunakan untuk praktik pemrograman yang baik.</p>
+                    </div>
+
+                    <div class="mb-10">
+                        <h2 class="text-2xl font-semibold mb-4">Contoh Menggunakan <code class="text-blue-500">var</code></h2>
+                        <div class="bg-back-blue text-white p-4 rounded-lg font-mono text-sm mb-4">
+                            <pre>var x = 5; <br>var y = 6; <br>var z = x + y;</pre>
+                        </div>
+                        <p class="text-sm italic text-gray-600">Catatan: <code class="text-blue-500">var</code> digunakan dalam semua kode JavaScript sebelum 2015.</p>
+                    </div>
+
+                    <div class="mb-10">
+                        <h2 class="text-2xl font-semibold mb-4">Contoh Menggunakan <code class="text-blue-500">let</code></h2>
+                        <div class="bg-back-blue text-white p-4 rounded-lg font-mono text-sm mb-4">
+                            <pre>let x = 5; <br>let y = 6; <br>let z = x + y;</pre>
+                        </div>
+                        <p class="mb-4"><code class="text-blue-500">let</code> memiliki cakupan blok dan diperkenalkan pada ES6 (2015).</p>
+                    </div>
+
+                    <div class="mb-10">
+                        <h2 class="text-2xl font-semibold mb-4">Contoh Menggunakan <code class="text-blue-500">const</code></h2>
+                        <div class="bg-back-blue text-white p-4 rounded-lg font-mono text-sm mb-4">
+                            <pre>const x = 5; <br>const y = 6; <br>const z = x + y;</pre>
+                        </div>
+                        <p class="mb-4"><code class="text-blue-500">const</code> digunakan untuk nilai konstan yang tidak dapat diubah.</p>
+                    </div>
+
+                    <div class="mb-10">
+                        <h2 class="text-2xl font-semibold mb-4">Contoh Campuran</h2>
+                        <p class="mb-4">Dalam contoh ini, <code class="text-blue-500">price1</code> dan <code class="text-blue-500">price2</code> adalah variabel konstan, sedangkan <code class="text-blue-500">total</code> dapat berubah:</p>
+                        <div class="bg-back-blue text-white p-4 rounded-lg font-mono text-sm mb-4">
+                            <pre>const price1 = 5; <br>const price2 = 6; <br>let total = price1 + price2;</pre>
+                        </div>
+                    </div>
+
+                    <div class="mb-10">
+                        <h2 class="text-2xl font-semibold mb-4">Perbedaan <code class="text-blue-500">var</code>, <code class="text-blue-500">let</code>, dan <code class="text-blue-500">const</code></h2>
+                        <p class="mb-4">Berikut perbandingan:</p>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full border-collapse table-auto text-left">
+                                <thead class="bg-gray-200">
+                                    <tr>
+                                        <th class="border px-4 py-2">Fitur</th>
+                                        <th class="border px-4 py-2">var</th>
+                                        <th class="border px-4 py-2">let</th>
+                                        <th class="border px-4 py-2">const</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-gray-50">
+                                        <td class="border px-4 py-2">Cakupan</td>
+                                        <td class="border px-4 py-2">Global</td>
+                                        <td class="border px-4 py-2">Blok</td>
+                                        <td class="border px-4 py-2">Blok</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border px-4 py-2">Bisa Dideklarasi Ulang</td>
+                                        <td class="border px-4 py-2">Ya</td>
+                                        <td class="border px-4 py-2">Tidak</td>
+                                        <td class="border px-4 py-2">Tidak</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="border px-4 py-2">Bisa Diubah</td>
+                                        <td class="border px-4 py-2">Ya</td>
+                                        <td class="border px-4 py-2">Ya</td>
+                                        <td class="border px-4 py-2">Tidak</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mb-10">
+                        <h2 class="text-2xl font-semibold mb-4">Operator Penugasan</h2>
+                        <p class="mb-4">Operator <code class="text-blue-500">=</code> dalam JavaScript digunakan untuk memberikan nilai, bukan membandingkan:</p>
+                        <div class="bg-back-blue text-white p-4 rounded-lg font-mono text-sm mb-4">
+                            <pre>let x = 10; <br>x = x + 5;</pre>
+                        </div>
+                        <p class="mb-4">Untuk membandingkan, gunakan <code class="text-blue-500">==</code> atau <code class="text-blue-500">===</code>.</p>
+                    </div>
+
+                    <div class="mb-10">
+                        <h2 class="text-2xl font-semibold mb-4">Tipe Data</h2>
+                        <p class="mb-4">Variabel dapat menyimpan angka atau string:</p>
+                        <div class="bg-back-blue text-white p-4 rounded-lg font-mono text-sm mb-4">
+                            <pre>const pi = 3.14; <br>let name = "John Doe"; <br>let response = 'Yes!';</pre>
+                        </div>
+                    </div>
+
+                    <div class="mb-10">
+                        <h2 class="text-2xl font-semibold mb-4">Variabel Tanpa Nilai</h2>
+                        <p class="mb-4">Variabel tanpa nilai awal akan memiliki nilai <code class="text-blue-500">undefined</code>:</p>
+                        <div class="bg-back-blue text-white p-4 rounded-lg font-mono text-sm mb-4">
+                            <pre>let carName;</pre>
+                        </div>
+                        <p class="text-sm">Hasilnya: <code class="text-blue-500">undefined</code></p>
+                    </div>
+
+                    <h2 class="text-2xl font-semibold mb-4">Kesimpulan</h2>
+                    <p class="text-xl mb-6">Gunakan <code class="text-blue-500">let</code> dan <code class="text-blue-500">const</code> untuk kode modern, dan hindari penggunaan <code class="text-blue-500">var</code> kecuali untuk mendukung browser lama.</p>
+                            </div>
             <!-- FOOTER -->
             <footer class="bg-side-blue text-white py-20">
                 <div class="container mx-auto text-center">

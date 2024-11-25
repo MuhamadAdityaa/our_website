@@ -205,114 +205,71 @@
         </ul>
     </div>
     <!-- SIDE BAR END -->
-            <!-- MATERI -->
+        <!-- MATERI -->
         <div class="overflow-y-auto w-screen">
             <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
                 <div class="text-5xl font-bold">
-                    JavaScript Best Practices
+                    JavaScript Output
                     <p class="text-xl py-5 font-normal">
-                        Praktik terbaik dalam menulis kode JavaScript bertujuan untuk meningkatkan kualitas, keterbacaan, dan performa kode.
+                        JavaScript menyediakan berbagai cara untuk menampilkan output kepada pengguna, baik melalui halaman HTML, pop-up, atau konsol browser.
                     </p>
                 </div>
-
-                <ul class="list-decimal list-inside text-2xl ol font-semibold py-5 ">
-                    <li>
-                        Gunakan const dan let daripada var
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>const untuk nilai yang tidak akan diubah.</li>
-                            <li>let untuk variabel yang bisa diubah.</li>
-                            <li>Hindari penggunaan var karena bisa menimbulkan masalah dengan scoping dan hoisting.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            const maxValue = 100;<br>
-                            let count = 0;
-                        </div>
-                    </li>
-                    <li>
-                        Gunakan Strict Mode
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Selalu gunakan "use strict"; di awal file atau fungsi untuk mengaktifkan mode ketat, yang membantu mencegah kesalahan umum.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Hindari Penggunaan Global Variables
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Usahakan untuk menghindari variabel global karena bisa menyebabkan konflik dan bug yang sulit dideteksi.</li>
-                            <li>Gunakan modularisasi atau IIFE (Immediately Invoked Function Expressions) untuk membatasi ruang lingkup.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Gunakan Arrow Functions untuk Fungsi Sederhana
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Gunakan arrow functions untuk kode yang lebih ringkas, terutama untuk fungsi pendek.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            const add = (a, b) => a + b;
-                        </div>
-                    </li>
-                    <li>
-                        Menulis Fungsi Kecil dan Spesifik
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Buat fungsi yang memiliki satu tujuan dan ukuran yang kecil. Ini akan membuat kode lebih mudah dipahami dan diuji.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            function calculateTotal(price, quantity) {<br>
-                            <span class="pl-4">return price * quantity;</span><br>
-                            }
-                        </div>
-                    </li>
-                    <li>
-                        Konsisten dalam Penamaan
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Gunakan konvensi penamaan yang konsisten (misalnya camelCase untuk variabel dan fungsi).</li>
-                            <li>Hindari penggunaan singkatan yang membingungkan.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Dokumentasi dan Komentar
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Berikan komentar untuk kode yang kompleks atau bagian yang tidak langsung jelas. Hindari komentar berlebihan pada kode yang sudah jelas.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            // Menghitung total harga<br>
-                            let total = calculateTotal(price, quantity);
-                        </div>
-                    </li>
-                    <li>
-                        Optimalkan Penggunaan Loop
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Gunakan forEach(), map(), dan metode array lainnya jika lebih cocok daripada for klasik.</li>
-                            <li>Hindari modifikasi array saat iterasi, gunakan metode yang mengembalikan array baru seperti map().</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Hindari eval()
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Hindari penggunaan eval() karena bisa menyebabkan masalah keamanan dan performa.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Periksa dan Tangani Error
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Gunakan try-catch untuk menangani error dan pastikan aplikasi tidak crash.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            try {<br>
-                            <span class="pl-4">let result = riskyFunction();</span><br>
-                            } catch (error) {<br>
-                            <span class="pl-4">console.error("An error occurred:", error);</span><br>
-                            }
-                        </div>
-                    </li>
-                </ul>
-
-                <div class="text-5xl py-14 font-bold">
-                    Kesimpulan
-                    <ul class="list-inside text-2xl ol font-normal py-5 ">
-                        <li>Mengikuti JavaScript best practices akan membantu menulis kode yang lebih bersih, aman, dan mudah dipelihara. Fokus pada penggunaan const/let, menulis fungsi kecil, dan menghindari praktik buruk seperti penggunaan eval() dan variabel global.</li>
+        
+                <div class="text-5xl pt-14 font-bold">
+                    Metode Output di JavaScript
+                    <ul class="list-decimal list-inside text-2xl ol font-semibold py-5">
+                        <li>
+                            <span>innerHTML</span>
+                            <ul class="list-inside list-disc text-xl font-normal">
+                                <li>Mengubah atau menampilkan konten HTML dari elemen tertentu.</li>
+                            </ul>
+                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                                document.getElementById("demo").innerHTML = "Hello World!";
+                            </div>
+                        </li>
+        
+                        <li>
+                            <span>document.write()</span>
+                            <ul class="list-inside list-disc text-xl font-normal">
+                                <li>Menulis langsung ke dokumen HTML. Cocok untuk pengujian sederhana, tetapi tidak disarankan untuk penggunaan setelah halaman dimuat.</li>
+                            </ul>
+                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                                document.write("Hello World!");
+                            </div>
+                        </li>
+        
+                        <li>
+                            <span>window.alert()</span>
+                            <ul class="list-inside list-disc text-xl font-normal">
+                                <li>Menampilkan pesan dalam kotak dialog pop-up.</li>
+                            </ul>
+                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                                alert("Hello World!");
+                            </div>
+                        </li>
+        
+                        <li>
+                            <span>console.log()</span>
+                            <ul class="list-inside list-disc text-xl font-normal">
+                                <li>Menampilkan output di konsol browser. Sangat berguna untuk debugging.</li>
+                            </ul>
+                            <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
+                                console.log("Hello World!");
+                            </div>
+                        </li>
                     </ul>
                 </div>
-            </div>
+        
+                <div class="text-5xl py-14 font-bold">
+                    Kesimpulan
+                    <ul class="list-disc list-inside text-2xl ol font-normal py-5">
+                        <li>Gunakan <span class="font-semibold">innerHTML</span> untuk memanipulasi konten halaman HTML.</li>
+                        <li><span class="font-semibold">console.log()</span> adalah metode terbaik untuk debugging.</li>
+                        <li>Hindari <span class="font-semibold">document.write()</span> untuk aplikasi nyata karena bisa mengganti konten halaman.</li>
+                        <li><span class="font-semibold">alert()</span> cocok untuk menampilkan notifikasi sederhana.</li>
+                    </ul>
+                </div>
+            </div>  
             <!-- FOOTER -->
             <footer class="bg-side-blue text-white py-20">
                 <div class="container mx-auto text-center">

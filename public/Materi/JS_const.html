@@ -205,112 +205,116 @@
         </ul>
     </div>
     <!-- SIDE BAR END -->
-            <!-- MATERI -->
+        <!-- MATERI -->
         <div class="overflow-y-auto w-screen">
             <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
-                <div class="text-5xl font-bold">
-                    JavaScript Best Practices
-                    <p class="text-xl py-5 font-normal">
-                        Praktik terbaik dalam menulis kode JavaScript bertujuan untuk meningkatkan kualitas, keterbacaan, dan performa kode.
-                    </p>
+                <h1 class="text-4xl font-bold mb-8">JavaScript <code class="text-blue-500">const</code></h1>
+                <p class="text-xl mb-6">Kata kunci <code class="text-blue-500">const</code> diperkenalkan dalam ES6 (2015) dan digunakan untuk mendeklarasikan variabel yang nilai atau referensinya tidak dapat diubah.</p>
+
+                <div class="mb-10">
+                    <h2 class="text-2xl font-semibold mb-4">Properti Variabel <code class="text-blue-500">const</code></h2>
+                    <ul class="list-disc pl-6 text-lg mb-6">
+                        <li>Variabel yang dideklarasikan dengan <code class="text-blue-500">const</code> tidak dapat dideklarasikan ulang.</li>
+                        <li>Variabel yang dideklarasikan dengan <code class="text-blue-500">const</code> tidak dapat diubah nilainya (reassigned).</li>
+                        <li>Variabel yang dideklarasikan dengan <code class="text-blue-500">const</code> memiliki cakupan blok.</li>
+                    </ul>
                 </div>
 
-                <ul class="list-decimal list-inside text-2xl ol font-semibold py-5 ">
-                    <li>
-                        Gunakan const dan let daripada var
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>const untuk nilai yang tidak akan diubah.</li>
-                            <li>let untuk variabel yang bisa diubah.</li>
-                            <li>Hindari penggunaan var karena bisa menimbulkan masalah dengan scoping dan hoisting.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            const maxValue = 100;<br>
-                            let count = 0;
-                        </div>
-                    </li>
-                    <li>
-                        Gunakan Strict Mode
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Selalu gunakan "use strict"; di awal file atau fungsi untuk mengaktifkan mode ketat, yang membantu mencegah kesalahan umum.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Hindari Penggunaan Global Variables
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Usahakan untuk menghindari variabel global karena bisa menyebabkan konflik dan bug yang sulit dideteksi.</li>
-                            <li>Gunakan modularisasi atau IIFE (Immediately Invoked Function Expressions) untuk membatasi ruang lingkup.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Gunakan Arrow Functions untuk Fungsi Sederhana
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Gunakan arrow functions untuk kode yang lebih ringkas, terutama untuk fungsi pendek.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            const add = (a, b) => a + b;
-                        </div>
-                    </li>
-                    <li>
-                        Menulis Fungsi Kecil dan Spesifik
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Buat fungsi yang memiliki satu tujuan dan ukuran yang kecil. Ini akan membuat kode lebih mudah dipahami dan diuji.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            function calculateTotal(price, quantity) {<br>
-                            <span class="pl-4">return price * quantity;</span><br>
-                            }
-                        </div>
-                    </li>
-                    <li>
-                        Konsisten dalam Penamaan
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Gunakan konvensi penamaan yang konsisten (misalnya camelCase untuk variabel dan fungsi).</li>
-                            <li>Hindari penggunaan singkatan yang membingungkan.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Dokumentasi dan Komentar
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Berikan komentar untuk kode yang kompleks atau bagian yang tidak langsung jelas. Hindari komentar berlebihan pada kode yang sudah jelas.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            // Menghitung total harga<br>
-                            let total = calculateTotal(price, quantity);
-                        </div>
-                    </li>
-                    <li>
-                        Optimalkan Penggunaan Loop
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Gunakan forEach(), map(), dan metode array lainnya jika lebih cocok daripada for klasik.</li>
-                            <li>Hindari modifikasi array saat iterasi, gunakan metode yang mengembalikan array baru seperti map().</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Hindari eval()
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Hindari penggunaan eval() karena bisa menyebabkan masalah keamanan dan performa.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Periksa dan Tangani Error
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Gunakan try-catch untuk menangani error dan pastikan aplikasi tidak crash.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            try {<br>
-                            <span class="pl-4">let result = riskyFunction();</span><br>
-                            } catch (error) {<br>
-                            <span class="pl-4">console.error("An error occurred:", error);</span><br>
-                            }
-                        </div>
-                    </li>
-                </ul>
+                <div class="mb-10">
+                    <h2 class="text-2xl font-semibold mb-4">Contoh: Tidak Dapat Diubah</h2>
+                    <div class="bg-back-blue text-white p-4 rounded-lg font-mono text-sm mb-4">
+                        <pre>const PI = 3.141592653589793; <br>PI = 3.14;      // Akan memberikan error <br>PI = PI + 10;   // Akan memberikan error</pre>
+                    </div>
+                </div>
 
-                <div class="text-5xl py-14 font-bold">
-                    Kesimpulan
-                    <ul class="list-inside text-2xl ol font-normal py-5 ">
-                        <li>Mengikuti JavaScript best practices akan membantu menulis kode yang lebih bersih, aman, dan mudah dipelihara. Fokus pada penggunaan const/let, menulis fungsi kecil, dan menghindari praktik buruk seperti penggunaan eval() dan variabel global.</li>
+                <div class="mb-10">
+                    <h2 class="text-2xl font-semibold mb-4">Harus Diberikan Nilai Saat Dideklarasikan</h2>
+                    <p class="mb-4">Variabel <code class="text-blue-500">const</code> harus diberikan nilai saat dideklarasikan:</p>
+                    <p class="mb-4"><strong>Benar:</strong></p>
+                    <div class="bg-back-blue text-white p-4 rounded-lg font-mono text-sm mb-4">
+                        <pre>const PI = 3.14159265359;</pre>
+                    </div>
+                    <p class="mb-4"><strong>Salah:</strong></p>
+                    <div class="bg-back-blue text-white p-4 rounded-lg font-mono text-sm mb-4">
+                        <pre>const PI; <br>PI = 3.14159265359; // Error</pre>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h2 class="text-2xl font-semibold mb-4">Kapan Menggunakan <code class="text-blue-500">const</code>?</h2>
+                    <p class="mb-4">Gunakan <code class="text-blue-500">const</code> ketika nilai variabel tidak akan diubah. Contohnya:</p>
+                    <ul class="list-disc pl-6 text-lg mb-6">
+                        <li>Array baru</li>
+                        <li>Objek baru</li>
+                        <li>Fungsi baru</li>
+                        <li>RegExp baru</li>
                     </ul>
+                </div>
+
+                <div class="mb-10">
+                    <h2 class="text-2xl font-semibold mb-4">Array Konstan</h2>
+                    <p class="mb-4">Anda dapat mengubah elemen dalam array konstan:</p>
+                    <div class="bg-back-blue text-white p-4 rounded-lg font-mono text-sm mb-4">
+                        <pre>const cars = ["Saab", "Volvo", "BMW"]; <br>cars[0] = "Toyota"; // Mengubah elemen <br>cars.push("Audi");  // Menambah elemen baru</pre>
+                    </div>
+                    <p class="mb-4">Tetapi Anda tidak dapat mengganti seluruh array:</p>
+                    <div class="bg-back-blue text-white p-4 rounded-lg font-mono text-sm mb-4">
+                        <pre>const cars = ["Saab", "Volvo", "BMW"]; <br>cars = ["Toyota", "Volvo", "Audi"]; // Error</pre>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h2 class="text-2xl font-semibold mb-4">Objek Konstan</h2>
+                    <p class="mb-4">Anda dapat mengubah properti dalam objek konstan:</p>
+                    <div class="bg-back-blue text-white p-4 rounded-lg font-mono text-sm mb-4">
+                        <pre>const car = {type: "Fiat", model: "500", color: "white"}; <br>car.color = "red";      // Mengubah properti <br>car.owner = "Johnson";  // Menambah properti baru</pre>
+                    </div>
+                    <p class="mb-4">Tetapi Anda tidak dapat mengganti seluruh objek:</p>
+                    <div class="bg-back-blue text-white p-4 rounded-lg font-mono text-sm mb-4">
+                        <pre>const car = {type: "Fiat", model: "500", color: "white"}; <br>car = {type: "Volvo", model: "EX60", color: "red"}; // Error</pre>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h2 class="text-2xl font-semibold mb-4">Perbandingan <code class="text-blue-500">var</code>, <code class="text-blue-500">let</code>, dan <code class="text-blue-500">const</code></h2>
+                    <p class="mb-4">Berikut perbandingan:</p>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full border-collapse table-auto text-left">
+                            <thead class="bg-gray-200">
+                                <tr>
+                                    <th class="border px-4 py-2">Fitur</th>
+                                    <th class="border px-4 py-2">var</th>
+                                    <th class="border px-4 py-2">let</th>
+                                    <th class="border px-4 py-2">const</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-gray-50">
+                                    <td class="border px-4 py-2">Cakupan</td>
+                                    <td class="border px-4 py-2">Global</td>
+                                    <td class="border px-4 py-2">Blok</td>
+                                    <td class="border px-4 py-2">Blok</td>
+                                </tr>
+                                <tr>
+                                    <td class="border px-4 py-2">Dapat Dideklarasikan Ulang</td>
+                                    <td class="border px-4 py-2">Ya</td>
+                                    <td class="border px-4 py-2">Tidak</td>
+                                    <td class="border px-4 py-2">Tidak</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="border px-4 py-2">Dapat Diubah Nilainya</td>
+                                    <td class="border px-4 py-2">Ya</td>
+                                    <td class="border px-4 py-2">Ya</td>
+                                    <td class="border px-4 py-2">Tidak</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h2 class="text-2xl font-semibold mb-4">Kesimpulan</h2>
+                    <p class="text-xl mb-6">Gunakan <code class="text-blue-500">const</code> untuk mendeklarasikan variabel yang nilainya tidak akan berubah, seperti array atau objek yang sifatnya konstan.</p>
                 </div>
             </div>
             <!-- FOOTER -->

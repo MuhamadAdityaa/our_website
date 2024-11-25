@@ -205,112 +205,56 @@
         </ul>
     </div>
     <!-- SIDE BAR END -->
-            <!-- MATERI -->
+        <!-- MATERI -->
         <div class="overflow-y-auto w-screen">
             <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
-                <div class="text-5xl font-bold">
-                    JavaScript Best Practices
-                    <p class="text-xl py-5 font-normal">
-                        Praktik terbaik dalam menulis kode JavaScript bertujuan untuk meningkatkan kualitas, keterbacaan, dan performa kode.
-                    </p>
+                <h1 class="text-4xl font-bold mb-8">JavaScript Comments</h1>
+                <p class="text-xl mb-6">JavaScript Comments digunakan untuk menjelaskan kode JavaScript dan membuatnya lebih mudah dibaca.</p>
+                <p class="text-xl mb-6">Komentar juga dapat digunakan untuk mencegah eksekusi kode saat menguji kode alternatif.</p>
+
+                <div class="mb-10">
+                    <h2 class="text-2xl font-semibold mb-4">Komentar Satu Baris</h2>
+                    <p class="mb-4">Komentar satu baris dimulai dengan <code>//</code>.</p>
+                    <p class="mb-4">Segala teks antara <code>//</code> dan akhir baris akan diabaikan oleh JavaScript (tidak akan dieksekusi).</p>
+
+                    <h3 class="text-xl font-semibold mb-4">Contoh</h3>
+                    <div class="bg-back-blue p-4 rounded-lg font-mono text-sm text-white">
+                        <pre>// Ubah judul:<br>document.getElementById("myH").innerHTML = "My First Page";<br><br>// Ubah paragraf:<br>document.getElementById("myP").innerHTML = "My first paragraph.";</pre>
+                    </div>
+
+                    <p class="mt-4">Contoh lain menggunakan komentar satu baris di akhir setiap baris untuk menjelaskan kode:</p>
+                    <div class="bg-back-blue p-4 rounded-lg font-mono text-sm text-white">
+                        <pre>let x = 5;      // Deklarasikan x, beri nilai 5<br>let y = x + 2;  // Deklarasikan y, beri nilai x + 2</pre>
+                    </div>
                 </div>
 
-                <ul class="list-decimal list-inside text-2xl ol font-semibold py-5 ">
-                    <li>
-                        Gunakan const dan let daripada var
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>const untuk nilai yang tidak akan diubah.</li>
-                            <li>let untuk variabel yang bisa diubah.</li>
-                            <li>Hindari penggunaan var karena bisa menimbulkan masalah dengan scoping dan hoisting.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            const maxValue = 100;<br>
-                            let count = 0;
-                        </div>
-                    </li>
-                    <li>
-                        Gunakan Strict Mode
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Selalu gunakan "use strict"; di awal file atau fungsi untuk mengaktifkan mode ketat, yang membantu mencegah kesalahan umum.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Hindari Penggunaan Global Variables
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Usahakan untuk menghindari variabel global karena bisa menyebabkan konflik dan bug yang sulit dideteksi.</li>
-                            <li>Gunakan modularisasi atau IIFE (Immediately Invoked Function Expressions) untuk membatasi ruang lingkup.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Gunakan Arrow Functions untuk Fungsi Sederhana
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Gunakan arrow functions untuk kode yang lebih ringkas, terutama untuk fungsi pendek.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            const add = (a, b) => a + b;
-                        </div>
-                    </li>
-                    <li>
-                        Menulis Fungsi Kecil dan Spesifik
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Buat fungsi yang memiliki satu tujuan dan ukuran yang kecil. Ini akan membuat kode lebih mudah dipahami dan diuji.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            function calculateTotal(price, quantity) {<br>
-                            <span class="pl-4">return price * quantity;</span><br>
-                            }
-                        </div>
-                    </li>
-                    <li>
-                        Konsisten dalam Penamaan
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Gunakan konvensi penamaan yang konsisten (misalnya camelCase untuk variabel dan fungsi).</li>
-                            <li>Hindari penggunaan singkatan yang membingungkan.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Dokumentasi dan Komentar
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Berikan komentar untuk kode yang kompleks atau bagian yang tidak langsung jelas. Hindari komentar berlebihan pada kode yang sudah jelas.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            // Menghitung total harga<br>
-                            let total = calculateTotal(price, quantity);
-                        </div>
-                    </li>
-                    <li>
-                        Optimalkan Penggunaan Loop
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Gunakan forEach(), map(), dan metode array lainnya jika lebih cocok daripada for klasik.</li>
-                            <li>Hindari modifikasi array saat iterasi, gunakan metode yang mengembalikan array baru seperti map().</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Hindari eval()
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Hindari penggunaan eval() karena bisa menyebabkan masalah keamanan dan performa.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Periksa dan Tangani Error
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Gunakan try-catch untuk menangani error dan pastikan aplikasi tidak crash.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            try {<br>
-                            <span class="pl-4">let result = riskyFunction();</span><br>
-                            } catch (error) {<br>
-                            <span class="pl-4">console.error("An error occurred:", error);</span><br>
-                            }
-                        </div>
-                    </li>
-                </ul>
+                <div class="mb-10">
+                    <h2 class="text-2xl font-semibold mb-4">Komentar Beberapa Baris</h2>
+                    <p class="mb-4">Komentar beberapa baris dimulai dengan <code>/*</code> dan diakhiri dengan <code>*/</code>.</p>
+                    <p class="mb-4">Segala teks antara <code>/*</code> dan <code>*/</code> akan diabaikan oleh JavaScript.</p>
 
-                <div class="text-5xl py-14 font-bold">
-                    Kesimpulan
-                    <ul class="list-inside text-2xl ol font-normal py-5 ">
-                        <li>Mengikuti JavaScript best practices akan membantu menulis kode yang lebih bersih, aman, dan mudah dipelihara. Fokus pada penggunaan const/let, menulis fungsi kecil, dan menghindari praktik buruk seperti penggunaan eval() dan variabel global.</li>
-                    </ul>
+                    <h3 class="text-xl font-semibold mb-4">Contoh</h3>
+                    <div class="bg-back-blue p-4 rounded-lg font-mono text-sm text-white">
+                        <pre>/* <br>Kode di bawah ini akan mengubah <br>judul dengan id = "myH" <br>dan paragraf dengan id = "myP" <br>di halaman web saya:<br>*/<br>document.getElementById("myH").innerHTML = "My First Page";<br>document.getElementById("myP").innerHTML = "My first paragraph.";</pre>
+                    </div>
+
+                    <p class="mt-4">Lebih umum menggunakan komentar satu baris. Komentar blok biasanya digunakan untuk dokumentasi formal.</p>
+                </div>
+
+                <div class="mb-10">
+                    <h2 class="text-2xl font-semibold mb-4">Menggunakan Komentar untuk Mencegah Eksekusi</h2>
+                    <p class="mb-4">Menambahkan komentar untuk mencegah eksekusi kode berguna saat pengujian kode.</p>
+                    <p class="mb-4">Menambahkan <code>//</code> di depan sebuah baris kode akan mengubah baris kode tersebut menjadi komentar dan tidak dieksekusi.</p>
+
+                    <h3 class="text-xl font-semibold mb-4">Contoh</h3>
+                    <div class="bg-back-blue p-4 rounded-lg font-mono text-sm text-white">
+                        <pre>//document.getElementById("myH").innerHTML = "My First Page";<br>document.getElementById("myP").innerHTML = "My first paragraph.";</pre>
+                    </div>
+
+                    <p class="mt-4">Contoh lain menggunakan komentar blok untuk mencegah eksekusi beberapa baris kode:</p>
+                    <div class="bg-back-blue p-4 rounded-lg font-mono text-sm text-white">
+                        <pre>/* <br>document.getElementById("myH").innerHTML = "My First Page";<br>document.getElementById("myP").innerHTML = "My first paragraph.";<br>*/</pre>
+                    </div>
                 </div>
             </div>
             <!-- FOOTER -->

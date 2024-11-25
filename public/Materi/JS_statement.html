@@ -205,111 +205,137 @@
         </ul>
     </div>
     <!-- SIDE BAR END -->
-            <!-- MATERI -->
+        <!-- MATERI -->
         <div class="overflow-y-auto w-screen">
             <div class="px-16 pt-11 md:px-20 md:pt-12 lg:px-24 lg:pt-14 xl:px-28 xl:pt-20">
-                <div class="text-5xl font-bold">
-                    JavaScript Best Practices
-                    <p class="text-xl py-5 font-normal">
-                        Praktik terbaik dalam menulis kode JavaScript bertujuan untuk meningkatkan kualitas, keterbacaan, dan performa kode.
+                <h1 class="text-4xl font-bold mb-8">JavaScript Statements</h1>
+    
+                <div class="section mb-8">
+                    <h2 class="text-2xl font-semibold mb-4">Contoh</h2>
+                    <div class="bg-back-blue text-white p-4 rounded-lg font-mono text-sm">
+                        <pre>let x, y, z;    // Pernyataan 1<br>x = 5;          // Pernyataan 2<br>y = 6;          // Pernyataan 3<br>z = x + y;      // Pernyataan 4</pre>
+                    </div>
+                </div>
+            
+                <div class="section mb-8">
+                    <h2 class="text-2xl font-semibold mb-4">Program JavaScript</h2>
+                    <p>
+                        Sebuah program komputer adalah daftar "instruksi" yang akan "dieksekusi" oleh komputer.
+                    </p>
+                    <p>
+                        Dalam bahasa pemrograman, instruksi-instruksi ini disebut sebagai pernyataan (*statements*).
+                    </p>
+                    <p>
+                        Sebuah program JavaScript adalah daftar pernyataan pemrograman.
+                    </p>
+                    <p>
+                        Dalam HTML, program JavaScript dieksekusi oleh peramban web.
                     </p>
                 </div>
-
-                <ul class="list-decimal list-inside text-2xl ol font-semibold py-5 ">
-                    <li>
-                        Gunakan const dan let daripada var
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>const untuk nilai yang tidak akan diubah.</li>
-                            <li>let untuk variabel yang bisa diubah.</li>
-                            <li>Hindari penggunaan var karena bisa menimbulkan masalah dengan scoping dan hoisting.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            const maxValue = 100;<br>
-                            let count = 0;
-                        </div>
-                    </li>
-                    <li>
-                        Gunakan Strict Mode
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Selalu gunakan "use strict"; di awal file atau fungsi untuk mengaktifkan mode ketat, yang membantu mencegah kesalahan umum.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Hindari Penggunaan Global Variables
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Usahakan untuk menghindari variabel global karena bisa menyebabkan konflik dan bug yang sulit dideteksi.</li>
-                            <li>Gunakan modularisasi atau IIFE (Immediately Invoked Function Expressions) untuk membatasi ruang lingkup.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Gunakan Arrow Functions untuk Fungsi Sederhana
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Gunakan arrow functions untuk kode yang lebih ringkas, terutama untuk fungsi pendek.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            const add = (a, b) => a + b;
-                        </div>
-                    </li>
-                    <li>
-                        Menulis Fungsi Kecil dan Spesifik
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Buat fungsi yang memiliki satu tujuan dan ukuran yang kecil. Ini akan membuat kode lebih mudah dipahami dan diuji.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            function calculateTotal(price, quantity) {<br>
-                            <span class="pl-4">return price * quantity;</span><br>
-                            }
-                        </div>
-                    </li>
-                    <li>
-                        Konsisten dalam Penamaan
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Gunakan konvensi penamaan yang konsisten (misalnya camelCase untuk variabel dan fungsi).</li>
-                            <li>Hindari penggunaan singkatan yang membingungkan.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Dokumentasi dan Komentar
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Berikan komentar untuk kode yang kompleks atau bagian yang tidak langsung jelas. Hindari komentar berlebihan pada kode yang sudah jelas.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            // Menghitung total harga<br>
-                            let total = calculateTotal(price, quantity);
-                        </div>
-                    </li>
-                    <li>
-                        Optimalkan Penggunaan Loop
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Gunakan forEach(), map(), dan metode array lainnya jika lebih cocok daripada for klasik.</li>
-                            <li>Hindari modifikasi array saat iterasi, gunakan metode yang mengembalikan array baru seperti map().</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Hindari eval()
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Hindari penggunaan eval() karena bisa menyebabkan masalah keamanan dan performa.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Periksa dan Tangani Error
-                        <ul class="list-inside list-disc text-xl font-normal">
-                            <li>Gunakan try-catch untuk menangani error dan pastikan aplikasi tidak crash.</li>
-                        </ul>
-                        <div class="border-2 p-3 border-side-blue rounded bg-side-blue text-white text-sm lg:text-2xl my-5">
-                            try {<br>
-                            <span class="pl-4">let result = riskyFunction();</span><br>
-                            } catch (error) {<br>
-                            <span class="pl-4">console.error("An error occurred:", error);</span><br>
-                            }
-                        </div>
-                    </li>
-                </ul>
-
-                <div class="text-5xl py-14 font-bold">
-                    Kesimpulan
-                    <ul class="list-inside text-2xl ol font-normal py-5 ">
-                        <li>Mengikuti JavaScript best practices akan membantu menulis kode yang lebih bersih, aman, dan mudah dipelihara. Fokus pada penggunaan const/let, menulis fungsi kecil, dan menghindari praktik buruk seperti penggunaan eval() dan variabel global.</li>
+            
+                <div class="section mb-8">
+                    <h2 class="text-2xl font-semibold mb-4">Pernyataan JavaScript</h2>
+                    <p>Pernyataan JavaScript terdiri dari:</p>
+                    <ul class="list-disc pl-6 mb-4">
+                        <li>Nilai</li>
+                        <li>Operator</li>
+                        <li>Ekspresi</li>
+                        <li>Kata Kunci</li>
+                        <li>Komentar</li>
+                    </ul>
+                    <p>
+                        Pernyataan ini memberi tahu peramban untuk menulis "Hello Dolly." di dalam elemen HTML dengan id="demo":
+                    </p>
+                    <div class="bg-back-blue text-white p-4 rounded-lg font-mono text-sm mb-6">
+                        <pre>document.getElementById("demo").innerHTML = "Hello Dolly.";</pre>
+                    </div>
+                    <p>
+                        Sebagian besar program JavaScript berisi banyak pernyataan JavaScript.
+                    </p>
+                    <p>
+                        Pernyataan-pernyataan tersebut dieksekusi satu per satu, dalam urutan yang sama seperti yang ditulis.
+                    </p>
+                    <p>
+                        Program JavaScript (dan pernyataan JavaScript) sering disebut kode JavaScript.
+                    </p>
+                </div>
+            
+                <div class="section mb-8">
+                    <h2 class="text-2xl font-semibold mb-4">Titik Koma (;)</h2>
+                    <p>
+                        Titik koma memisahkan pernyataan-pernyataan JavaScript.
+                    </p>
+                    <p>
+                        Tambahkan titik koma di akhir setiap pernyataan yang dapat dieksekusi:
+                    </p>
+                    <div class="bg-back-blue text-white p-4 rounded-lg font-mono text-sm mb-6">
+                        <pre>let a, b, c;  // Deklarasi 3 variabel<br>a = 5;        // Berikan nilai 5 ke a<br>b = 6;        // Berikan nilai 6 ke b<br>c = a + b;    // Berikan hasil penjumlahan a dan b ke c</pre>
+                    </div>
+                    <p>
+                        Saat dipisahkan dengan titik koma, beberapa pernyataan dalam satu baris diperbolehkan:
+                    </p>
+                    <div class="bg-back-blue text-white p-4 rounded-lg font-mono text-sm mb-6">
+                        <pre>a = 5; b = 6; c = a + b;</pre>
+                    </div>
+                    <p>
+                        Di web, Anda mungkin melihat contoh tanpa titik koma.
+                        Menambahkan titik koma di akhir pernyataan tidak diwajibkan, tetapi sangat disarankan.
+                    </p>
+                </div>
+            
+                <div class="section mb-8">
+                    <h2 class="text-2xl font-semibold mb-4">Spasi Putih dalam JavaScript</h2>
+                    <p>
+                        JavaScript mengabaikan banyak spasi. Anda dapat menambahkan spasi putih ke skrip Anda untuk membuatnya lebih mudah dibaca.
+                    </p>
+                    <p>
+                        Baris berikut setara:
+                    </p>
+                    <div class="bg-back-blue text-white p-4 rounded-lg font-mono text-sm mb-6">
+                        <pre>let person = "Hege";<br>let person="Hege";</pre>
+                    </div>
+                    <p>
+                        Praktik yang baik adalah menambahkan spasi di sekitar operator (= + - * /):
+                    </p>
+                    <div class="bg-back-blue text-white p-4 rounded-lg font-mono text-sm mb-6">
+                        <pre>let x = y + z;</pre>
+                    </div>
+                </div>
+            
+                <div class="section mb-8">
+                    <h2 class="text-2xl font-semibold mb-4">Blok Kode JavaScript</h2>
+                    <p>
+                        Pernyataan JavaScript dapat dikelompokkan bersama dalam blok kode, di dalam kurung kurawal {...}.
+                    </p>
+                    <p>
+                        Tujuan dari blok kode adalah untuk menentukan pernyataan yang akan dieksekusi bersama.
+                    </p>
+                    <p>
+                        Salah satu tempat Anda menemukan pernyataan yang dikelompokkan bersama dalam blok adalah di fungsi JavaScript:
+                    </p>
+                    <div class="bg-back-blue text-white p-4 rounded-lg font-mono text-sm mb-6">
+                        <pre>function myFunction() {<br>  document.getElementById("demo1").innerHTML = "Hello Dolly!";<br>  document.getElementById("demo2").innerHTML = "How are you?";<br>}</pre>
+                    </div>
+                </div>
+            
+                <div class="section mb-8">
+                    <h2 class="text-2xl font-semibold mb-4">Kata Kunci JavaScript</h2>
+                    <p>
+                        Pernyataan JavaScript sering kali dimulai dengan sebuah kata kunci untuk mengidentifikasi tindakan JavaScript yang akan dilakukan.
+                    </p>
+                    <p>
+                        Berikut adalah daftar beberapa kata kunci yang akan Anda pelajari dalam tutorial ini:
+                    </p>
+                    <ul class="list-disc pl-6 mb-4">
+                        <li><strong>var</strong> - Mendeklarasikan sebuah variabel</li>
+                        <li><strong>let</strong> - Mendeklarasikan variabel dalam blok</li>
+                        <li><strong>const</strong> - Mendeklarasikan konstanta dalam blok</li>
+                        <li><strong>if</strong> - Menandai blok pernyataan untuk dieksekusi berdasarkan kondisi</li>
+                        <li><strong>switch</strong> - Menandai blok pernyataan untuk dieksekusi pada beberapa kasus</li>
+                        <li><strong>for</strong> - Menandai blok pernyataan untuk dieksekusi dalam sebuah perulangan</li>
+                        <li><strong>function</strong> - Mendeklarasikan sebuah fungsi</li>
+                        <li><strong>return</strong> - Keluar dari fungsi</li>
+                        <li><strong>try</strong> - Mengimplementasikan penanganan kesalahan pada blok pernyataan</li>
                     </ul>
                 </div>
             </div>
